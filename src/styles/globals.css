@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Paragraphs styles */
+/* 1: font-subtitles text-[17pt] leading-[32px] tracking-[0.5px] */
+/* 2: font-subtitles text-[15pt] leading-[24px] tracking-[0.25px] */
+/* 3: font-subtitles text-[13pt] leading-[24px] tracking-[0.25px] */
