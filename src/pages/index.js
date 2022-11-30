@@ -1,7 +1,6 @@
-import Image from 'next/image';
-import WelcomePage from '../components/welcome';
-import About from '../components/aboutSection/about_section';
-import Navbar from '../components/navbar';
+import WelcomePage from '../components/welcomeSection/welcome';
+import About from '../components/aboutSection/description/about_section';
+import FooterSection from '../components/footerSection/footer';
 
 export default function Home() {
   return (
@@ -11,7 +10,9 @@ export default function Home() {
         <About />
       </main>
 
-      <footer></footer>
+      <footer>
+        <FooterSection />
+      </footer>
     </div>
   );
 }

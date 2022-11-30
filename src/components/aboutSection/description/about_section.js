@@ -1,5 +1,5 @@
 import SkillsSection from '../myskills/myskills';
-import AboutmeTitle from './aboutmeTitle';
+import AboutmeTitle from '../aboutSectionTitle';
 import AboutMe from './about_me';
 import AboutMeImage from './about_me_image';
 
@@ -8,7 +8,6 @@ const About = () => {
     <div className='flex flex-col sm:flex-row '>
       <div className='w-full sm:w-1/2 bg-white border-2 m-3 flex flex-col'>
         <AboutmeTitle title='ABOUT ME' />
-
         <AboutMeImage />
         <AboutMe />
       </div>
