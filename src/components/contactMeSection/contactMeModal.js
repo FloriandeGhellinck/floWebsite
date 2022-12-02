@@ -3,26 +3,34 @@ import { Dialog, Transition } from '@headlessui/react';
 import { send } from 'emailjs-com';
 import { PhoneMissedCallIcon } from '@heroicons/react/outline';
 
+const errorInit = {
+  firstName: false,
+  lastName: false,
+  email: false,
+  message: false,
+};
+
 const ContactMeModal = ({ openModal, setOpenModal }) => {
-  const [error, setError] = useState({
-    firstName: false,
-    lastName: false,
-    email: false,
-    message: false,
-  });
+  const [error, setError] = useState(errorInit);
+
+  const [formSubmitSuccesfull, setFormSubmitSuccesfull] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const { firstName, lastName, phone, email, message } = e.target;
-    console.log(firstName.value);
 
-    setError({
-      firstName: !firstName.value,
-      lastName: !lastName.value,
-      email: !email.value,
-      message: !message.value,
-    });
+    if (!firstName.value || !lastName.value || !email.value || !message.value) {
+      setError({
+        firstName: !firstName.value,
+        lastName: !lastName.value,
+        email: !email.value,
+        message: !message.value,
+      });
 
+      return;
+    }
+
+    setError(errorInit);
     const resultsTosend = {
       from_firstname: firstName.value,
       from_lastname: lastName.value,
@@ -30,8 +38,6 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
       from_email: email.value,
       from_message: message.value,
     };
-
-    // setToSend({ ...toSend, [e.target.name]: e.target.value });
 
     send(
       'service_rscfymr',
@@ -45,6 +51,18 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
       .catch((err) => {
         console.log('FAILED...', err);
       });
+
+    firstName.value = '';
+    lastName.value = '';
+    phone.value = '';
+    email.value = '';
+    message.value = '';
+    setFormSubmitSuccesfull(true);
+
+    setTimeout(() => {
+      setOpenModal(false);
+      setFormSubmitSuccesfull(false);
+    }, 3000);
 
     //   fetch('http://localhost:3000/blogs', {
     //     method: 'POST',
@@ -161,12 +179,19 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
                           {error.message && <RequiredField />}
                         </div>
                         <div className='mt-3'>
-                          <button
-                            type='submit'
-                            className='mt-6 inline-flex w-full justify-center rounded-md border border-gray-300 bg-blue-300 px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:text-gray-500  sm:mt-0 sm:w-auto sm:text-sm'
-                          >
-                            Submit
-                          </button>
+                          {!formSubmitSuccesfull && (
+                            <button
+                              type='submit'
+                              className='mt-6 inline-flex w-full justify-center rounded-md border border-gray-300 bg-blue-300 px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:text-gray-500  sm:mt-0 sm:w-auto sm:text-sm'
+                            >
+                              Submit
+                            </button>
+                          )}
+                          {formSubmitSuccesfull && (
+                            <p className='text-green-700'>
+                              Thanks for your message
+                            </p>
+                          )}
                         </div>
                       </form>
 

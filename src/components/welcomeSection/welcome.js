@@ -9,7 +9,7 @@ const WelcomePage = ({ openModal, setOpenModal }) => {
   return (
     <>
       <div className='w-screen h-screen relative grid grid-cols-12 grid-rows-6'>
-        <div className='opacity-40 '>
+        <div className='opacity-100'>
           <Image
             src='/photo-1497215842964-222b430dc094.png'
             className='object-cover'
@@ -25,9 +25,9 @@ const WelcomePage = ({ openModal, setOpenModal }) => {
             right: 20,
             bottom: 20,
           }}
-          className='absolute w-full top-0h-screen wrapper col-start-4 md:col-start-6 row-start-2  leading-none'
+          className='absolute w-full top-0h-screen wrapper col-start-5 md:col-start-7 row-start-2  leading-none'
         >
-          <h1 className='relative font-poppins font-extrabold md:text-7xl text-4xl dark:text-white text-black'>
+          <h1 className='relative font-poppins font-extrabold md:text-7xl text-4xl text-gray-800 '>
             <span>HI, I'M FLORIAN </span> <br />
             <span> A FULL STACK</span> <br />
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-rose-600'>
