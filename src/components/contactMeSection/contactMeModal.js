@@ -105,7 +105,7 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
               >
                 <Dialog.Panel className='relative transform overflow-hidden rounded-lg bg-white dark:bg-gray-800 px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6'>
                   <div className='sm:items-start'>
-                    <div className='mt-3 text-center sm:mt-0 sm:ml-4'>
+                    <div className='mt-3 text-center sm:mt-0'>
                       <Dialog.Title
                         as='h3'
                         className='text-lg leading-6 text-gray-900 dark:text-white content-center font-extrabold mb-5'
