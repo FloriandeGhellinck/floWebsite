@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import Head from 'next/head';
-import Navbar from '../components/navbar';
+import { ThemeProvider } from 'next-themes';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -14,10 +14,9 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel='stylesheet' href='https://unpkg.com/aos@next/dist/aos.css' />
       </Head>
-
-      <Navbar>
+      <ThemeProvider attribute='class'>
         <Component {...pageProps} />
-      </Navbar>
+      </ThemeProvider>
     </>
   );
 }

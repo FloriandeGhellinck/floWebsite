@@ -1,8 +1,10 @@
+import { motion } from 'framer-motion';
+
 const SkillsList = (technology) => {
   return (
     <>
       <div className='font-poppins text-black font-extrabold text-2xl text-center py-2'>
-        <div>
+        <div className='m-3'>
           <h1>{technology.title}</h1>
         </div>
         <ul
@@ -10,7 +12,8 @@ const SkillsList = (technology) => {
           className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'
         >
           {technology.items.map((person) => (
-            <li
+            <motion.li
+              whileHover={{ scale: 1.2 }}
               key={person.id}
               className='col-span-1 divide-y divide-gray-200 rounded-lg border-2 bg-white shadow-xl text-center '
             >
@@ -34,7 +37,7 @@ const SkillsList = (technology) => {
                   ></div>
                 </div>
               </div>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>

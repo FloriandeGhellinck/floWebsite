@@ -1,42 +1,56 @@
-const Navbar = ({ children }) => {
+import { motion } from 'framer-motion';
+
+const Navbar = ({ children, handleClickScroll, setOpenModal }) => {
   return (
     <>
       <nav>
-        <NavContent />
+        <NavContent
+          handleClickScroll={handleClickScroll}
+          setOpenModal={setOpenModal}
+        />
         <div className='relative'> {children}</div>
       </nav>
     </>
   );
 };
 
-const NavContent = () => {
+const NavContent = ({ handleClickScroll, setOpenModal }) => {
   return (
     <>
       <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 fixed w-full z-20 '>
         <div className='relative flex h-16 items-center justify-between'>
           <div className='flex flex-1 justify-center sm:justify-end '>
-            <div className='hidden sm:ml-6 sm:block'>
-              <div className='flex align-right space-x-4 '>
-                <a
-                  href='#'
-                  className='text-gray-700 hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
+            <div className='sm:ml-6 '>
+              <div className='flex align-right space-x-4 hover:cursor-pointer'>
+                <motion.a
+                  whileHover={{ scale: 1.2 }}
+                  onHoverStart={(e) => {}}
+                  onHoverEnd={(e) => {}}
+                  className='text-gray-700 hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium '
+                  onClick={handleClickScroll}
                 >
                   About Me
-                </a>
+                </motion.a>
 
-                <a
+                <motion.a
+                  whileHover={{ scale: 1.2 }}
+                  onHoverStart={(e) => {}}
+                  onHoverEnd={(e) => {}}
                   href='#'
                   className='text-gray-700 hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                 >
                   Projects
-                </a>
+                </motion.a>
 
-                <a
-                  href='#'
+                <motion.a
+                  whileHover={{ scale: 1.2 }}
+                  onHoverStart={(e) => {}}
+                  onHoverEnd={(e) => {}}
+                  onClick={() => setOpenModal(true)}
                   className='text-gray-700 hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                 >
                   Contact Me
-                </a>
+                </motion.a>
               </div>
             </div>
           </div>

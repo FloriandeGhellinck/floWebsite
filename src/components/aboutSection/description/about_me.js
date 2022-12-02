@@ -1,8 +1,8 @@
 const AboutMe = () => {
   return (
-    <div className=' text-black  font-poppins'>
-      <div className='flex flex-col text-left m-5'>
-        <div className='m-1'>
+    <div className='font-poppins'>
+      <div className='flex flex-col text-justify m-5'>
+        <div className='m-1 text-black '>
           <p>
             {' '}
             My Name is <span className='font-bold'>Florian</span>, I'm 27 years
@@ -37,5 +37,4 @@ const AboutMe = () => {
     </div>
   );
 };
-
 export default AboutMe;
