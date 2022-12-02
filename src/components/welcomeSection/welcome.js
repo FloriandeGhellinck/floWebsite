@@ -37,9 +37,9 @@ const WelcomePage = ({ openModal, setOpenModal }) => {
           </h1>
         </motion.div>
         <ContactMeModal openModal={openModal} setOpenModal={setOpenModal} />
-        <div className='absolute flex z-20'>
+        {/* <div className='absolute flex z-20'>
           <ButtonHandleTheme />
-        </div>
+        </div> */}
       </div>
     </>
   );
