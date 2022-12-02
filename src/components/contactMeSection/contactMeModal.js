@@ -41,7 +41,6 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
     //     console.log('New blog added');
     //   });
   };
-
   return (
     <>
       <Transition.Root show={openModal} as={Fragment}>

@@ -18,7 +18,10 @@ export default function Home() {
         <WelcomePage openModal={openModal} setOpenModal={setOpenModal} />
         {/* <WelcomePage modalStatus={open} /> */}
 
-        <About aboutMeSectionRef={aboutMeSectionRef} />
+        <About
+          aboutMeSectionRef={aboutMeSectionRef}
+          setOpenModal={setOpenModal}
+        />
       </main>
 
       <footer>

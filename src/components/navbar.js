@@ -26,7 +26,7 @@ const NavContent = ({ handleClickScroll, setOpenModal }) => {
                   whileHover={{ scale: 1.2 }}
                   onHoverStart={(e) => {}}
                   onHoverEnd={(e) => {}}
-                  className='text-gray-700 hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium '
+                  className='text-gray-700 dark:text-white hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium '
                   onClick={handleClickScroll}
                 >
                   About Me
@@ -37,7 +37,7 @@ const NavContent = ({ handleClickScroll, setOpenModal }) => {
                   onHoverStart={(e) => {}}
                   onHoverEnd={(e) => {}}
                   href='#'
-                  className='text-gray-700 hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
+                  className='text-gray-700  dark:text-white hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                 >
                   Projects
                 </motion.a>
@@ -47,7 +47,7 @@ const NavContent = ({ handleClickScroll, setOpenModal }) => {
                   onHoverStart={(e) => {}}
                   onHoverEnd={(e) => {}}
                   onClick={() => setOpenModal(true)}
-                  className='text-gray-700 hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
+                  className='text-gray-700 dark:text-white hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                 >
                   Contact Me
                 </motion.a>
