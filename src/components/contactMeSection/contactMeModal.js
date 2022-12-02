@@ -1,5 +1,7 @@
 import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
+import { send } from 'emailjs-com';
+import { PhoneMissedCallIcon } from '@heroicons/react/outline';
 
 const ContactMeModal = ({ openModal, setOpenModal }) => {
   const [error, setError] = useState({
@@ -9,16 +11,19 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
     message: false,
   });
 
+  const [toSend, setToSend] = useState({
+    from_firstname: '',
+    from_lastname: '',
+    from_phone: '',
+    from_email: '',
+    from_message: '',
+  });
+
+  console.log(toSend, 'test');
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const { firstName, lastName, phone, email, message } = e.target;
-    console.log(
-      firstName.value,
-      lastName.value,
-      phone.value,
-      email.value,
-      message.value
-    );
 
     setError({
       firstName: !firstName.value,
@@ -27,11 +32,23 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
       message: !message.value,
     });
 
-    if (firstName && lastName && email && message) {
-      const blog = { firstName, lastName, phone, email, message };
+    setToSend({
+      from_firstname: firstName.value,
+      from_lastname: lastName.value,
+      from_phone: phone.value,
+      from_email: email.value,
+      from_message: message.value,
+    });
 
-      console.log(blog);
-    }
+    // setToSend({ ...toSend, [e.target.name]: e.target.value });
+
+    send('service_rscfymr', 'template_yku03a4', toSend, 'FgfF6x1YhcrgKsd7W')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      })
+      .catch((err) => {
+        console.log('FAILED...', err);
+      });
 
     //   fetch('http://localhost:3000/blogs', {
     //     method: 'POST',
@@ -89,9 +106,11 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
                               Firstname<span className='text-red-500'>*</span>
                             </label>
                             <input
+                              name='from_firstname'
                               id='firstName'
                               type='text'
                               className='border-2 w-full'
+                              //   value={toSend.from_firstname}
                             />
                             {error.firstName && <RequiredField />}
                           </div>
@@ -100,18 +119,22 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
                               Lastname<span className='text-red-500'>*</span>
                             </label>
                             <input
+                              name='from_lastname'
                               id='lastName'
                               type='text'
                               className='border-2 w-full'
+                              //   value={toSend.from_lastname}
                             />
                             {error.lastName && <RequiredField />}
                           </div>
                           <div>
                             <label htmlFor='phone'>Phone</label>
                             <input
+                              name='from_phone'
                               id='phone'
                               type='tel'
                               className='border-2 w-full'
+                              //   value={toSend.from_phone}
                             />
                           </div>
                           <div>
@@ -119,9 +142,11 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
                               Email<span className='text-red-500'>*</span>
                             </label>
                             <input
+                              name='from_email'
                               id='email'
                               type='email'
                               className='border-2 w-full'
+                              //   value={toSend.from_email}
                             />
                             {error.email && <RequiredField />}
                           </div>
@@ -131,9 +156,11 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
                             Message<span className='text-red-500'>*</span>
                           </label>
                           <textarea
+                            name='from_message'
                             id='message'
                             type='text'
                             className='border-2 w-full h-20'
+                            // value={toSend.from_message}
                           />
                           {error.message && <RequiredField />}
                         </div>
