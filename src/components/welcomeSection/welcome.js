@@ -27,7 +27,7 @@ const WelcomePage = ({ openModal, setOpenModal }) => {
           }}
           className='absolute w-full top-0h-screen wrapper col-start-4 md:col-start-6 row-start-2  leading-none'
         >
-          <h1 className='relative font-poppins font-extrabold md:text-7xl text-4xl dark:text-white '>
+          <h1 className='relative font-poppins font-extrabold md:text-7xl text-4xl dark:text-white text-black'>
             <span>HI, I'M FLORIAN </span> <br />
             <span> A FULL STACK</span> <br />
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-rose-600'>
