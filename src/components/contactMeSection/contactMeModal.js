@@ -34,12 +34,6 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
   //     console.log(blog);
   //   }
 
-  const [firstName, setFirstname] = useState('');
-  const [lastName, setLastname] = useState('');
-  const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-
   const [error, setError] = useState({
     firstName: false,
     lastName: false,
@@ -49,23 +43,28 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (firstName === '') {
-      setError(error.firstName(true));
-    }
-    if (!lastName) {
-      setError(error.lastName(true));
-    }
-    if (!email) {
-      setError(error.email(true));
-    }
-    if (!message) {
-      setError(error.message(true));
-    }
+    const { firstName, lastName, phone, email, message } = e.target;
+    console.log(
+      firstName.value,
+      lastName.value,
+      phone.value,
+      email.value,
+      message.value
+    );
+
+    setError({
+      firstName: !firstName.value,
+      lastName: !lastName.value,
+      email: !email.value,
+      message: !message.value,
+    });
+
     if (firstName && lastName && email && message) {
       const blog = { firstName, lastName, phone, email, message };
 
       console.log(blog);
     }
+
     //   fetch('http://localhost:3000/blogs', {
     //     method: 'POST',
     //     headers: { 'Content-Type': 'application/json' },
@@ -74,53 +73,6 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
     //     console.log('New blog added');
     //   });
   };
-
-  //   const validateForm = () => {
-  //     const [values, setValues] = useState({
-  //       firstName: '',
-  //       lastName: '',
-  //       phone: '',
-  //       email: '',
-  //       message: '',
-  //     });
-
-  //     const saveFormData = async () => {
-  //       const response = await fetch('/api/registration', {
-  //         method: 'POST',
-  //         body: JSON.stringify(values),
-  //       });
-  //       if (response.status !== 200) {
-  //         throw new Error(`Request failed: ${response.status}`);
-  //       }
-  //     };
-  //   };
-
-  //   const onSubmit = async (event) => {
-  //     event.preventDefault();
-  //     try {
-  //       await saveFormData();
-  //       setValues({
-  //         firstName: '',
-  //         lastName: '',
-  //         phone: '',
-  //         email: '',
-  //         message: '',
-  //       });
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
-
-  //   const submitForm = () => {
-  //     if (firstName && lastName && email && message) {
-  //       setOpenModal(false);
-  //       form.push(firstName, lastName, phone, email, message);
-  //     }
-  //   };
-
-  //   const isFormValid = () => {
-  //     if (!firstName)
-  //   };
 
   return (
     <>
@@ -170,11 +122,9 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
                               Firstname<span className='text-red-500'>*</span>
                             </label>
                             <input
-                              onChange={(e) => setFirstname(e.target.value)}
+                              id='firstName'
                               type='text'
-                              required
                               className='border-2 w-full'
-                              value={firstName}
                             />
                             {error.firstName && <RequiredField />}
                           </div>
@@ -183,21 +133,18 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
                               Lastname<span className='text-red-500'>*</span>
                             </label>
                             <input
-                              onChange={(e) => setLastname(e.target.value)}
+                              id='lastName'
                               type='text'
-                              required
                               className='border-2 w-full'
-                              value={lastName}
                             />
                             {error.lastName && <RequiredField />}
                           </div>
                           <div>
                             <label htmlFor='phone'>Phone</label>
                             <input
-                              onChange={(e) => setPhone(e.target.value)}
+                              id='phone'
                               type='tel'
                               className='border-2 w-full'
-                              value={phone}
                             />
                           </div>
                           <div>
@@ -205,27 +152,21 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
                               Email<span className='text-red-500'>*</span>
                             </label>
                             <input
-                              onChange={(e) => setEmail(e.target.value)}
+                              id='email'
                               type='email'
-                              required
                               className='border-2 w-full'
-                              value={email}
                             />
                             {error.email && <RequiredField />}
                           </div>
                         </div>
                         <div className='mt-3'>
-                          <label htmlFor='Message'>
+                          <label htmlFor='message'>
                             Message<span className='text-red-500'>*</span>
                           </label>
                           <textarea
-                            onChange={(e) => setMessage(e.target.value)}
+                            id='message'
                             type='text'
-                            cols='40'
-                            rows='5'
-                            required
                             className='border-2 w-full h-20'
-                            value={message}
                           />
                           {error.message && <RequiredField />}
                         </div>
