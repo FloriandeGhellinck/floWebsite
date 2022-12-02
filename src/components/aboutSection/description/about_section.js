@@ -6,7 +6,7 @@ import AboutMeImage from './about_me_image';
 const About = ({ aboutMeSectionRef, setOpenModal }) => {
   return (
     <div
-      className='flex flex-col sm:flex-row m-2 gap-1'
+      className='flex flex-col sm:flex-row m-2 gap-1 absolute'
       ref={aboutMeSectionRef}
     >
       <div className='w-full sm:w-1/2 bg-white border-2 p-3 flex flex-col'>

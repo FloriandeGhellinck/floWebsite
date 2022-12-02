@@ -20,7 +20,7 @@ const SkillsList = (technology) => {
               <div className='flex w-full align-center space-x-6 p-6 '>
                 <div className='flex-1 truncate '>
                   <div className='flex items-center space-x-3'>
-                    <h3 className='inline-block flex-shrink-0 rounded-full  px-2 py-0.5 text-xl font-medium text-green-800 w-full'>
+                    <h3 className='inline-block flex-shrink-0 rounded-full px-2 py-0.5 text-xl font-medium text-black w-full'>
                       {person.langage}
                     </h3>
                   </div>
