@@ -1,4 +1,12 @@
+import Aos from 'aos';
+import { useEffect } from 'react';
+import 'aos/dist/aos.css';
+
 const AboutMe = ({ setOpenModal }) => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <div className='font-poppins'>
       <div className='flex flex-col text-justify m-5'>
@@ -52,7 +60,11 @@ const AboutMe = ({ setOpenModal }) => {
           <br />
           <p>
             Do not hesitate to{' '}
-            <button onClick={() => setOpenModal(true)} className='font-bold'>
+            <button
+              data-aos='fade-down-right'
+              onClick={() => setOpenModal(true)}
+              className='font-bold'
+            >
               contact me
             </button>
             . I'll be more than happy to discuss about any tech related topic.
