@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel='stylesheet' href='https://unpkg.com/aos@next/dist/aos.css' />
       </Head>
-      <ThemeProvider attribute='class' forcedTheme='dark'>
+      <ThemeProvider attribute='class'>
         <Component {...pageProps} />
       </ThemeProvider>
     </>

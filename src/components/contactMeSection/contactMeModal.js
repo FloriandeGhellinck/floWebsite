@@ -2,38 +2,6 @@ import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 
 const ContactMeModal = ({ openModal, setOpenModal }) => {
-  // const [firstName, setFirstname] = useState('');
-  // const [lastName, setLastname] = useState('');
-  // const [phone, setPhone] = useState('');
-  // const [email, setEmail] = useState('');
-  // const [message, setMessage] = useState('');
-
-  // const [firstNameError, setFirstnameError] = useState('');
-  // const [lastNameError, setLastnameError] = useState('');
-  // const [emailError, setEmailError] = useState('');
-  // const [messageError, setMessageError] = useState('');
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   if (firstName === '') {
-  //     setFirstnameError('Please provide your firstname');
-  //   }
-  //   if (lastName === '') {
-  //     setLastnameError('Please provide your lastname');
-  //   }
-  //   if (email === '') {
-  //     setEmailError('Please enter a valid email');
-  //   }
-  //   if (message === '') {
-  //     setMessageError('Please enter a message');
-  //   }
-  //   if (firstName && lastName && email && message) {
-  //     const blog = { firstName, lastName, phone, email, message };
-
-  //     console.log(blog);
-  //   }
-
   const [error, setError] = useState({
     firstName: false,
     lastName: false,
@@ -105,12 +73,12 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
                 leaveFrom='opacity-100 translate-y-0 sm:scale-100'
                 leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
               >
-                <Dialog.Panel className='relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6'>
+                <Dialog.Panel className='relative transform overflow-hidden rounded-lg bg-white dark:bg-gray-800 px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6'>
                   <div className='sm:items-start'>
                     <div className='mt-3 text-center sm:mt-0 sm:ml-4'>
                       <Dialog.Title
                         as='h3'
-                        className='text-lg leading-6 text-gray-900 content-center font-extrabold mb-5'
+                        className='text-lg leading-6 text-gray-900 dark:text-white content-center font-extrabold mb-5'
                       >
                         Contact Me
                       </Dialog.Title>
