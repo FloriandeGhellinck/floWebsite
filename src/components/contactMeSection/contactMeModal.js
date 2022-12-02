@@ -11,19 +11,10 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
     message: false,
   });
 
-  const [toSend, setToSend] = useState({
-    from_firstname: '',
-    from_lastname: '',
-    from_phone: '',
-    from_email: '',
-    from_message: '',
-  });
-
-  console.log(toSend, 'test');
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const { firstName, lastName, phone, email, message } = e.target;
+    console.log(firstName.value);
 
     setError({
       firstName: !firstName.value,
@@ -32,17 +23,22 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
       message: !message.value,
     });
 
-    setToSend({
+    const resultsTosend = {
       from_firstname: firstName.value,
       from_lastname: lastName.value,
       from_phone: phone.value,
       from_email: email.value,
       from_message: message.value,
-    });
+    };
 
     // setToSend({ ...toSend, [e.target.name]: e.target.value });
 
-    send('service_rscfymr', 'template_yku03a4', toSend, 'FgfF6x1YhcrgKsd7W')
+    send(
+      'service_rscfymr',
+      'template_yku03a4',
+      resultsTosend,
+      'FgfF6x1YhcrgKsd7W'
+    )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
       })
@@ -99,7 +95,7 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
                         Contact Me
                       </Dialog.Title>
                       {/* <form> */}
-                      <form onSubmit={handleSubmit}>
+                      <form onSubmit={(e) => handleSubmit(e)}>
                         <div className='gap-3 text-center sm:grid sm:grid-cols-2 flex flex-col'>
                           <div className=''>
                             <label htmlFor='firstName' className=''>
