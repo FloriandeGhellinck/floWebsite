@@ -1,4 +1,4 @@
-import WelcomePage from '../components/welcomeSection/welcome';
+import WelcomePage from '../components/welcomeSection/welcomeHomePage';
 import About from '../components/aboutSection/description/about_section';
 import FooterSection from '../components/footerSection/footer';
 import { useRef, useState, useEffect } from 'react';

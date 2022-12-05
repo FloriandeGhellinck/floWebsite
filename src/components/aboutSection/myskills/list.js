@@ -7,10 +7,7 @@ const SkillsList = (technology) => {
         <div className='m-3'>
           <h1>{technology.title}</h1>
         </div>
-        <ul
-          role='list'
-          className='grid grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-3'
-        >
+        <ul role='list' className='grid grid-cols-2 gap-6 xl:grid-cols-3'>
           {technology.items.map((person) => (
             <motion.li
               whileHover={{ scale: 1.2 }}

@@ -1,6 +1,7 @@
 import Aos from 'aos';
 import { useEffect } from 'react';
 import 'aos/dist/aos.css';
+import { Link } from 'react-scroll';
 
 const AboutMe = ({ setOpenModal }) => {
   useEffect(() => {
@@ -19,17 +20,22 @@ const AboutMe = ({ setOpenModal }) => {
           </p>
           <br />
           <p>
-            I started my journey at Cowboy SA. As a Micro-Mobility defender, I
-            loved to work for a company in the bike industry. As a tech-lover, I
-            greatly enjoyed to align my micro mobility passion with my tech
-            passion. I loved the company and the product, but I wished a more
-            tech related job.
+            I started my journey at{' '}
+            <a href='https://cowboy.com/' target='_blank'>
+              <span className='font-bold'> Cowboy SA. </span>
+            </a>{' '}
+            As a Micro-Mobility defender, I loved to work for a company in the
+            bike industry. As a tech-lover, I greatly enjoyed to align my micro
+            mobility passion with my tech passion. I loved the company and the
+            product, but I wished a more tech related job.
           </p>{' '}
           <br />
           <p>
             This is why I started a{' '}
-            <span className='font-bold'>coding bootcamp </span>at La Capsule in
-            March 22. I learned the basics of JavaScript and React. I really
+            <a href='https://www.lacapsule.academy' target='_blank'>
+              <span className='font-bold'>coding bootcamp at La Capsule </span>{' '}
+            </a>
+            in March 22. I learned the basics of JavaScript and React. I really
             enjoyed my bootcamp, but I was kind of frustrated when it was
             finished because nobody can master this huge topic of coding in less
             than 3 months!{' '}
@@ -43,8 +49,8 @@ const AboutMe = ({ setOpenModal }) => {
           </p>
           <br />
           <p>
-            Knwing theory on technologies is great, but I'm looking to practice
-            and develop my coding skills on professionnal projects.
+            Since I know a lot about theory on those technologies, I'm looking
+            to practice and develop my coding skills on professionnal projects.
           </p>
           <br />
           <p>
