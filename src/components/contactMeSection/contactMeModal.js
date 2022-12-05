@@ -15,6 +15,11 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
 
   const [formSubmitSuccesfull, setFormSubmitSuccesfull] = useState(false);
 
+  const setCloseModal = () => {
+    setOpenModal(false);
+    setError(errorInit);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const { firstName, lastName, phone, email, message } = e.target;
@@ -75,11 +80,7 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
   return (
     <>
       <Transition.Root show={openModal} as={Fragment}>
-        <Dialog
-          as='div'
-          className='relative z-10'
-          onClose={() => setOpenModal(false)}
-        >
+        <Dialog as='div' className='relative z-10' onClose={setCloseModal}>
           <Transition.Child
             as={Fragment}
             enter='ease-out duration-300'

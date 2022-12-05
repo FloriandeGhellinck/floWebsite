@@ -1,7 +1,7 @@
 import Aos from 'aos';
 import { useEffect } from 'react';
 import 'aos/dist/aos.css';
-import { Link } from 'react-scroll';
+import ContactMeModal from '../../contactMeSection/contactMeModal';
 
 const AboutMe = ({ setOpenModal }) => {
   useEffect(() => {
