@@ -1,20 +1,21 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import ContactMeModal from './contactMeSection/contactMeModal';
 
-const Navbar = ({ children, handleClickScroll, setOpenModal }) => {
+const Navbar = ({ children, handleClickScroll }) => {
   return (
     <>
       <nav>
-        <NavContent
-          handleClickScroll={handleClickScroll}
-          setOpenModal={setOpenModal}
-        />
+        <NavContent handleClickScroll={handleClickScroll} />
         <div className=''> {children}</div>
       </nav>
     </>
   );
 };
 
-const NavContent = ({ handleClickScroll, setOpenModal }) => {
+const NavContent = ({ handleClickScroll }) => {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <>
       <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 fixed w-full z-10 '>
@@ -22,6 +23,10 @@ const NavContent = ({ handleClickScroll, setOpenModal }) => {
           <div className='flex flex-1 justify-center sm:justify-end '>
             <div className='sm:ml-6 backdrop-blur-sm'>
               <div className='flex align-right space-x-4 hover:cursor-pointer'>
+                <ContactMeModal
+                  openModal={openModal}
+                  setOpenModal={setOpenModal}
+                />
                 <motion.a
                   whileHover={{ scale: 1.2 }}
                   onHoverStart={(e) => {}}

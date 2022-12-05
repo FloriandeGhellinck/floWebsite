@@ -38,7 +38,6 @@ const WelcomePage = ({ openModal, setOpenModal }) => {
             </motion.div>
           </div>
         </div>
-        <ContactMeModal openModal={openModal} setOpenModal={setOpenModal} />
       </div>
       {/* <div className='absolute flex z-20'>
           <ButtonHandleTheme />

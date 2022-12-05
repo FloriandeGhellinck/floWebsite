@@ -6,23 +6,17 @@ import Navbar from '../components/navbar_main_page';
 
 export default function Home() {
   const aboutMeSectionRef = useRef(null);
-  const handleClickScroll = () => {
+  const handleClickScroll = ({}) => {
     aboutMeSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
-
-  const [openModal, setOpenModal] = useState(false);
-
   return (
     <>
-      <Navbar handleClickScroll={handleClickScroll} setOpenModal={setOpenModal}>
+      <Navbar handleClickScroll={handleClickScroll}>
         <main>
-          <WelcomePage openModal={openModal} setOpenModal={setOpenModal} />
+          <WelcomePage />
           {/* <WelcomePage modalStatus={open} /> */}
 
-          <About
-            aboutMeSectionRef={aboutMeSectionRef}
-            setOpenModal={setOpenModal}
-          />
+          <About aboutMeSectionRef={aboutMeSectionRef} />
         </main>
       </Navbar>
       <footer>

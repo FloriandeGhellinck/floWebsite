@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import ContactMeModal from '../contactMeSection/contactMeModal';
 
 const ProjectsHomePage = () => {
   return (
