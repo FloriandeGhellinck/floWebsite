@@ -24,11 +24,10 @@ export default function Home() {
             setOpenModal={setOpenModal}
           />
         </main>
-
-        <footer>
-          <FooterSection />
-        </footer>
       </Navbar>
+      <footer>
+        <FooterSection />
+      </footer>
     </>
   );
 }

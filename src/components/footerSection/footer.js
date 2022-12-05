@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 const FooterSection = () => {
   return (
-    <div>
-      <div className='w-full font-poppins text-black dark:text-white'>
+    <div className=''>
+      <div className='w-full font-poppins text-black dark:text-white '>
         <div className='mx-5 my-2 flex justify-between'>
           <div className=''>
             <p className='text-sm'>
