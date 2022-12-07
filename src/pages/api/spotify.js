@@ -10,6 +10,7 @@ const ExportSpotify = () => {
 
   const [token, setToken] = useState('');
   const [searchKey, setSearchKey] = useState('');
+  const [artist, setArtist] = useState('');
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -51,7 +52,22 @@ const ExportSpotify = () => {
       },
     });
     console.log(data);
+
+    setArtist(data.artists.items);
   };
+
+  //   const renderArtists = () => {
+  //     return artist.map((artist) => (
+  //       <div key={artist.id}>
+  //         {artist.images.length ? (
+  //           <Image src={artist.images[0].url} alt='' />
+  //         ) : (
+  //           <div> No Image</div>
+  //         )}
+  //         {artist.name}
+  //       </div>
+  //     ));
+  //   };
 
   return (
     <div>

@@ -11,7 +11,7 @@ const About = ({ aboutMeSectionRef, setOpenModal }) => {
       ref={aboutMeSectionRef}
     >
       <div className='w-full sm:w-1/2 bg-white border-2 p-3 flex flex-col'>
-        <ExportSpotify />
+        {/* <ExportSpotify /> */}
         <AboutmeTitle title='ABOUT ME' />
         <AboutMeImage />
         <AboutMe setOpenModal={setOpenModal} />
