@@ -2,6 +2,7 @@ import SkillsSection from '../myskills/myskills';
 import AboutmeTitle from '../aboutSectionTitle';
 import AboutMe from './about_me';
 import AboutMeImage from './about_me_image';
+import ExportSpotify from '../../../pages/api/spotify';
 
 const About = ({ aboutMeSectionRef, setOpenModal }) => {
   return (
@@ -10,6 +11,7 @@ const About = ({ aboutMeSectionRef, setOpenModal }) => {
       ref={aboutMeSectionRef}
     >
       <div className='w-full sm:w-1/2 bg-white border-2 p-3 flex flex-col'>
+        <ExportSpotify />
         <AboutmeTitle title='ABOUT ME' />
         <AboutMeImage />
         <AboutMe setOpenModal={setOpenModal} />

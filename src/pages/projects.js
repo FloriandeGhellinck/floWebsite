@@ -6,9 +6,10 @@ import EmbillardProject from '../components/projets/embillard';
 import ProjectsHomePage from '../components/welcomeSection/welcomeProjectsPage';
 
 const Projects = () => {
+  const [openModal, setOpenModal] = useState(false);
   return (
     <>
-      <Navbar>
+      <Navbar openModal={openModal} setOpenModal={setOpenModal}>
         <main>
           <ProjectsHomePage />
           <div className='flex flex-col sm:flex-row'>

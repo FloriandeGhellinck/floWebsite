@@ -11,7 +11,7 @@ const Navbar = ({ children, handleClickScroll, openModal, setOpenModal }) => {
           openModal={openModal}
           setOpenModal={setOpenModal}
         />
-        <div className=''> {children}</div>
+        <div> {children}</div>
       </nav>
     </>
   );

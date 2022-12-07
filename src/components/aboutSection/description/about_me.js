@@ -77,6 +77,17 @@ const AboutMe = ({ setOpenModal }) => {
             And if you just want to grab a coffee together, just knock on the
             door !
           </p>
+          {/* <iframe
+            className='rounded-md w-full h-fit '
+            // style='border-radius:12px'
+            src='https://open.spotify.com/embed/playlist/1Q3wzBwemS2rfkRxsKGVAz?utm_source=generator'
+            // width='100%'
+            // height='380'
+            frameBorder='0'
+            allowfullscreen=''
+            allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+            loading='lazy'
+          ></iframe> */}
         </div>
       </div>
     </div>
