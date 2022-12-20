@@ -17,7 +17,7 @@ const EmbillardProject = () => {
 
   return (
     <>
-      <div className='flex flex-col sm:flex-row m-2 gap-1 w-1/2'>
+      <div className='flex flex-col sm:flex-row p-2 gap-1 md:w-1/2 w-full'>
         <div className=' bg-white border-2 p-3 flex flex-col'>
           <AboutmeTitle title='EMBILLARD' />
           <div className='font-poppins'>
@@ -52,10 +52,10 @@ const EmbillardProject = () => {
                 <TitleProjectsDescription title='Frontend' />
                 <p class>
                   This projects was the opportunity to train my Tailwind skills.
-                  I totally agree that the design isn't beautifull, but I had
-                  the opportunity to have a better understanding about how divs
-                  work together, how things are rendered, how to play with the
-                  responsivenes, the different components...
+                  I totally agree that the design isn't beautiful, but I had the
+                  opportunity to have a better understanding about how divs work
+                  together, how things are rendered, how to play with the
+                  responsiveness, the different components...
                 </p>
                 <TitleProjectsDescription title='Backend' />
                 <p class>

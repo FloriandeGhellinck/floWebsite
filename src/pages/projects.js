@@ -6,6 +6,7 @@ import EmbillardProject from '../components/projets/embillard';
 import ProjectCard from '../components/projets/projectCard';
 import Temoins from '../components/projets/temoins';
 import TicTacToeProject from '../components/projets/tictactoe';
+import TiebreakProject from '../components/projets/tiebreak';
 import Weather from '../components/projets/weather';
 import ProjectsHomePage from '../components/welcomeSection/welcomeProjectsPage';
 
@@ -17,17 +18,17 @@ const Projects = () => {
         <main>
           <ProjectsHomePage />
           <div className='flex p-2 flex-col w-full'>
-            <div className='flex'>
+            <div className='flex flex-col md:flex-row'>
               <ConverterProject />
               <EmbillardProject />
             </div>
-            <div className='flex'>
+            <div className='flex flex-col md:flex-row '>
               <TicTacToeProject />
               <Temoins />
             </div>
-            <div className='flex'>
+            <div className='flex flex-col md:flex-row '>
               <Weather />
-              <div className='w-1/2 m-2' />
+              <TiebreakProject />
             </div>
           </div>
         </main>

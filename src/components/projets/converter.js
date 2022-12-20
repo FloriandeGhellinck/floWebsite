@@ -15,7 +15,7 @@ const ConverterProject = () => {
 
   return (
     <>
-      <div className='flex flex-col sm:flex-row m-2 gap-1 w-1/2 '>
+      <div className='flex flex-col sm:flex-row p-2 gap-1 md:w-1/2 w-full'>
         <div className=' bg-white border-2 p-3 flex flex-col'>
           <AboutmeTitle title='CONVERTER' />
           <div className='font-poppins'>
@@ -23,8 +23,8 @@ const ConverterProject = () => {
               <div className='m-1 text-black '>
                 <p>
                   Converter has been my first project at Embie. This project is
-                  an internal project and has been created to convert data for
-                  one of Embie's customer.
+                  used internally and has been created to convert data for one
+                  of Embie's customer.
                 </p>{' '}
                 <br />
                 <p>
@@ -47,7 +47,7 @@ const ConverterProject = () => {
                 <SkillsList title='' items={embillardTechnos} />
                 <TitleProjectsDescription title='Frontend' />
                 <p class>
-                  I discovered Tailwind os this project. I also created a blakc
+                  I discovered Tailwind on this project. I also created a blakc
                   and white theme, in order to start playing with libraries. It
                   was a first great single page project to learn how things work
                   together.
