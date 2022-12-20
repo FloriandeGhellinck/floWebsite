@@ -17,7 +17,7 @@ const EmbillardProject = () => {
 
   return (
     <>
-      <div className='flex flex-col sm:flex-row m-2 gap-1 w-full'>
+      <div className='flex flex-col sm:flex-row m-2 gap-1 w-1/2'>
         <div className=' bg-white border-2 p-3 flex flex-col'>
           <AboutmeTitle title='EMBILLARD' />
           <div className='font-poppins'>

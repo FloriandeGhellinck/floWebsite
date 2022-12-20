@@ -2,7 +2,7 @@ import AboutmeTitle from '../aboutSection/aboutSectionTitle';
 import SkillsList from '../aboutSection/myskills/list';
 import TitleProjectsDescription from './titleSection';
 
-const ConverterProject = () => {
+const Temoins = () => {
   const embillardTechnos = [
     { langage: 'Javascript', width: '100%', id: 1000 },
     { langage: 'HTML', width: '100%', id: 1001 },
@@ -15,22 +15,21 @@ const ConverterProject = () => {
 
   return (
     <>
-      <div className='flex flex-col sm:flex-row m-2 gap-1 w-1/2 '>
+      <div className='flex flex-col sm:flex-row m-2 gap-1 w-1/2'>
         <div className=' bg-white border-2 p-3 flex flex-col'>
-          <AboutmeTitle title='CONVERTER' />
+          <AboutmeTitle title='TEMOINS' />
           <div className='font-poppins'>
             <div className='flex flex-col text-justify m-5'>
               <div className='m-1 text-black '>
                 <p>
-                  Converter has been my first project at Embie. This project is
-                  an internal project and has been created to convert data for
-                  one of Embie's customer.
+                  Temoin project is a personal project developped to ask to my
+                  best friend if they want to be my best man for my wedding.
                 </p>{' '}
                 <br />
                 <p>
                   Click{' '}
                   <a
-                    href='https://converter.embie.be/'
+                    href='https://quiz-flo.vercel.app/'
                     target='_blank'
                     className='font-bold'
                   >
@@ -40,17 +39,18 @@ const ConverterProject = () => {
                   to check it out.
                 </p>
                 <br />
-                <br />
-                <br />
-                <br />
+                <p>
+                  I added a hidden class on big screens. This website isn't
+                  visible on phone screens.
+                </p>
                 <TitleProjectsDescription title='Used Technologies' />
                 <SkillsList title='' items={embillardTechnos} />
                 <TitleProjectsDescription title='Frontend' />
                 <p class>
-                  I discovered Tailwind os this project. I also created a blakc
-                  and white theme, in order to start playing with libraries. It
-                  was a first great single page project to learn how things work
-                  together.
+                  This projects was a very small project developed in juste one
+                  day. It's certainly not a big project, but it was really cool
+                  to be able to develop a small personal project in less than
+                  one day.
                 </p>
                 {/* <p>
                   {' '}
@@ -121,4 +121,4 @@ const ConverterProject = () => {
   );
 };
 
-export default ConverterProject;
+export default Temoins;

@@ -89,6 +89,14 @@ const AboutMe = ({ setOpenModal }) => {
             loading='lazy'
           ></iframe> */}
         </div>
+        <div className='flex justify-center items-center my-3'>
+          <a target='_blank' href='/public/CV-Florian-de-Ghellinck.pdf'>
+            <button className=' py-2 px-4 rounded-xl text-black border-2 border-primary-orange-100 hover:bg-primary-orange-100 hover:text-white'>
+              {' '}
+              DOWNLOAD MY RESUME
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   );

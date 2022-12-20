@@ -9,6 +9,7 @@ const SkillsSection = () => {
     { langage: 'TypeScript', width: '60%', id: 1004 },
     { langage: 'NextJS', width: '80%', id: 1005 },
     { langage: 'Tailwind', width: '90%', id: 1006 },
+    { langage: 'CSS', width: '90%', id: 1012 },
   ];
 
   const databasesLanguages = [
@@ -21,7 +22,7 @@ const SkillsSection = () => {
 
   return (
     <div className='bg-white flex flex-col items-center  '>
-      <div className='gap-5'>
+      <div className='lg:gap-5 gap-2 p-1'>
         <SkillsList title='Technologies' items={codeLanguages} />
         <SkillsList title='Other related skills' items={databasesLanguages} />
       </div>

@@ -22,7 +22,7 @@ export default function Home({}) {
         <main>
           <WelcomePage />
           {/* <WelcomePage modalStatus={open} /> */}
-          <div className='w-1/2'>
+          {/* <div className='w-1/2'>
             <iframe
               className='rounded-sm'
               src='https://open.spotify.com/embed/playlist/5Pprezn2M1hgji17v6zCzT?utm_source=generator'
@@ -33,7 +33,7 @@ export default function Home({}) {
               allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
               loading='lazy'
             ></iframe>
-          </div>
+          </div> */}
           <About
             aboutMeSectionRef={aboutMeSectionRef}
             setOpenModal={setOpenModal}

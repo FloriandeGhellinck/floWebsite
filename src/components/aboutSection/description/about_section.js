@@ -7,16 +7,16 @@ import ExportSpotify from '../../../pages/api/spotify';
 const About = ({ aboutMeSectionRef, setOpenModal }) => {
   return (
     <div
-      className='flex flex-col sm:flex-row m-2 gap-1'
+      className='flex flex-col md:flex-row m-2 gap-1'
       ref={aboutMeSectionRef}
     >
-      <div className='w-full sm:w-1/2 bg-white border-2 p-3 flex flex-col'>
+      <div className='w-full md:w-1/2 bg-white border-2 px-3 pt-3 flex flex-col'>
         {/* <ExportSpotify /> */}
         <AboutmeTitle title='ABOUT ME' />
         <AboutMeImage />
         <AboutMe setOpenModal={setOpenModal} />
       </div>
-      <div className='w-full sm:w-1/2 bg-white border-2 p-3"'>
+      <div className='w-full md:w-1/2 bg-white border-2 px-3 pt-3"'>
         <AboutmeTitle title='SKILLS' />
         <SkillsSection />
       </div>

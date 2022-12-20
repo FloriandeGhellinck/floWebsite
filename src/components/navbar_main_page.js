@@ -29,7 +29,7 @@ const NavContent = ({ handleClickScroll, openModal, setOpenModal }) => {
                   openModal={openModal}
                   setOpenModal={setOpenModal}
                 />
-                <motion.a
+                {/* <motion.a
                   whileHover={{ scale: 1.2 }}
                   onHoverStart={(e) => {}}
                   onHoverEnd={(e) => {}}
@@ -37,7 +37,7 @@ const NavContent = ({ handleClickScroll, openModal, setOpenModal }) => {
                   onClick={handleClickScroll}
                 >
                   About Me
-                </motion.a>
+                </motion.a> */}
 
                 {/* <motion.a
                   whileHover={{ scale: 1.2 }}
@@ -74,7 +74,7 @@ const NavContent = ({ handleClickScroll, openModal, setOpenModal }) => {
                   href='/'
                   className='text-gray-700 dark:text-white hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                 >
-                  home
+                  Home
                 </motion.a>
               </div>
             </div>

@@ -2,8 +2,8 @@ import AboutmeTitle from '../aboutSection/aboutSectionTitle';
 import SkillsList from '../aboutSection/myskills/list';
 import TitleProjectsDescription from './titleSection';
 
-const ConverterProject = () => {
-  const embillardTechnos = [
+const TicTacToeProject = () => {
+  const tictactoeTechnos = [
     { langage: 'Javascript', width: '100%', id: 1000 },
     { langage: 'HTML', width: '100%', id: 1001 },
     { langage: 'React', width: '100%', id: 1002 },
@@ -11,26 +11,28 @@ const ConverterProject = () => {
     { langage: 'TypeScript', width: '100%', id: 1004 },
     { langage: 'NextJS', width: '100%', id: 1005 },
     { langage: 'Tailwind', width: '100%', id: 1006 },
+    { langage: 'Hasura', width: '100%', id: 1008 },
   ];
 
   return (
     <>
-      <div className='flex flex-col sm:flex-row m-2 gap-1 w-1/2 '>
+      <div className='flex flex-col sm:flex-row m-2 gap-1 w-1/2'>
         <div className=' bg-white border-2 p-3 flex flex-col'>
-          <AboutmeTitle title='CONVERTER' />
+          <AboutmeTitle title='TicTacToe' />
           <div className='font-poppins'>
             <div className='flex flex-col text-justify m-5'>
               <div className='m-1 text-black '>
                 <p>
-                  Converter has been my first project at Embie. This project is
-                  an internal project and has been created to convert data for
-                  one of Embie's customer.
+                  TicTacToe Project is a personal project developped to
+                  reinforce my coding skills. I wanted to code a game with a
+                  grid. I developed this to test my logical skills with the grid
+                  and how to handle it.
                 </p>{' '}
                 <br />
                 <p>
                   Click{' '}
                   <a
-                    href='https://converter.embie.be/'
+                    href='https://tic-tac-toe-floriandeghellinck.vercel.app/'
                     target='_blank'
                     className='font-bold'
                   >
@@ -40,18 +42,28 @@ const ConverterProject = () => {
                   to check it out.
                 </p>
                 <br />
-                <br />
-                <br />
-                <br />
                 <TitleProjectsDescription title='Used Technologies' />
-                <SkillsList title='' items={embillardTechnos} />
+                <SkillsList title='' items={tictactoeTechnos} />
                 <TitleProjectsDescription title='Frontend' />
                 <p class>
-                  I discovered Tailwind os this project. I also created a blakc
-                  and white theme, in order to start playing with libraries. It
-                  was a first great single page project to learn how things work
-                  together.
+                  This projects was the opportunity to train my Tailwind skills
+                  on grids. I also had to add all the logic to check out if
+                  someone won a game. I did this project based on a video on
+                  YouTube. It was a great project to work on.
                 </p>
+                {/* <TitleProjectsDescription title='Backend' />
+                <p class>
+                  I had to develop a small backend in order to let people login
+                  in the app to enter their scores. It's just a call to the
+                  database in order to compare the passwords and allow access or
+                  not.
+                </p> */}
+                {/* <TitleProjectsDescription title='Database' />
+                <p class>
+                  A database has been created for this project. This database
+                  has been constructed to create user's profiles and to manage
+                  their participations to games.
+                </p> */}
                 {/* <p>
                   {' '}
                   My Name is <span className='font-bold'>Florian</span>, I'm 27
@@ -121,4 +133,4 @@ const ConverterProject = () => {
   );
 };
 
-export default ConverterProject;
+export default TicTacToeProject;
