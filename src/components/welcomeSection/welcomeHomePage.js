@@ -1,11 +1,7 @@
 import Image from 'next/image';
-import { motion, useDragControls } from 'framer-motion';
-import { MoonIcon, SunIcon } from '@heroicons/react/outline';
-import { useTheme } from 'next-themes';
-import ContactMeModal from '../contactMeSection/contactMeModal';
-import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
-const WelcomePage = ({ openModal, setOpenModal }) => {
+const WelcomePage = () => {
   return (
     <>
       <div className='h-screen w-screen p-5 relative'>
@@ -39,36 +35,7 @@ const WelcomePage = ({ openModal, setOpenModal }) => {
           </div>
         </div>
       </div>
-      {/* <div className='absolute flex z-20'>
-          <ButtonHandleTheme />
-        </div> */}
     </>
-  );
-};
-
-const ButtonHandleTheme = () => {
-  const { theme, setTheme } = useTheme();
-
-  const handleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
-
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    setLoaded(true);
-  }, []);
-
-  if (!loaded) return null;
-
-  return (
-    <button className='rounded-full' onClick={handleTheme}>
-      {theme === 'light' ? (
-        <MoonIcon className='h-10 w-10 stroke-black' />
-      ) : (
-        <SunIcon className='h-10 w-10 stroke-white' />
-      )}
-    </button>
   );
 };
 

@@ -3,7 +3,6 @@ import FooterSection from '../components/footerSection/footer';
 import Navbar from '../components/navbar_main_page';
 import ConverterProject from '../components/projets/converter';
 import EmbillardProject from '../components/projets/embillard';
-import ProjectCard from '../components/projets/projectCard';
 import Temoins from '../components/projets/temoins';
 import TicTacToeProject from '../components/projets/tictactoe';
 import TiebreakProject from '../components/projets/tiebreak';

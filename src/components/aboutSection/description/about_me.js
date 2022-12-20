@@ -1,7 +1,6 @@
 import Aos from 'aos';
 import { useEffect } from 'react';
 import 'aos/dist/aos.css';
-import ContactMeModal from '../../contactMeSection/contactMeModal';
 
 const AboutMe = ({ setOpenModal }) => {
   useEffect(() => {
@@ -90,7 +89,7 @@ const AboutMe = ({ setOpenModal }) => {
           ></iframe> */}
         </div>
         <div className='flex justify-center items-center my-3'>
-          <a target='_blank' href='/public/CV-Florian-de-Ghellinck.pdf'>
+          <a target='_blank' href='/CV-Florian-de-Ghellinck.pdf' download>
             <button className=' py-2 px-4 rounded-xl text-black border-2 border-primary-orange-100 hover:bg-primary-orange-100 hover:text-white'>
               {' '}
               DOWNLOAD MY RESUME
