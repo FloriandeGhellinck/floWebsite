@@ -4,8 +4,6 @@ import TitleProjectsDescription from './titleSection';
 
 const Temoins = () => {
   const embillardTechnos = [
-    { langage: 'Javascript', width: '100%', id: 1000 },
-    { langage: 'HTML', width: '100%', id: 1001 },
     { langage: 'React', width: '100%', id: 1002 },
     { langage: 'NodeJS', width: '100%', id: 1003 },
     { langage: 'TypeScript', width: '100%', id: 1004 },
@@ -40,7 +38,7 @@ const Temoins = () => {
                 </p>
                 <br />
                 <p>
-                  I added a hidden class on big screens. This website isn't
+                  I added a hidden class on big screens. This website is only
                   visible on phone screens.
                 </p>
                 <TitleProjectsDescription title='Used Technologies' />

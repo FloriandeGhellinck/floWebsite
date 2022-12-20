@@ -4,8 +4,6 @@ import TitleProjectsDescription from './titleSection';
 
 const TiebreakProject = () => {
   const embillardTechnos = [
-    { langage: 'Javascript', width: '100%', id: 1000 },
-    { langage: 'HTML', width: '100%', id: 1001 },
     { langage: 'CSS', width: '100%', id: 10011 },
     { langage: 'React', width: '100%', id: 1002 },
     { langage: 'NodeJS', width: '100%', id: 1003 },

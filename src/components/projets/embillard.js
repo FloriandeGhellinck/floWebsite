@@ -4,8 +4,6 @@ import TitleProjectsDescription from './titleSection';
 
 const EmbillardProject = () => {
   const embillardTechnos = [
-    { langage: 'Javascript', width: '100%', id: 1000 },
-    { langage: 'HTML', width: '100%', id: 1001 },
     { langage: 'React', width: '100%', id: 1002 },
     { langage: 'NodeJS', width: '100%', id: 1003 },
     { langage: 'TypeScript', width: '100%', id: 1004 },

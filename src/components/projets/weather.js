@@ -4,8 +4,6 @@ import TitleProjectsDescription from './titleSection';
 
 const Weather = () => {
   const embillardTechnos = [
-    { langage: 'Javascript', width: '100%', id: 1000 },
-    { langage: 'HTML', width: '100%', id: 1001 },
     { langage: 'React', width: '100%', id: 1002 },
     { langage: 'NodeJS', width: '100%', id: 1003 },
     { langage: 'TypeScript', width: '100%', id: 1004 },
@@ -51,9 +49,9 @@ const Weather = () => {
                 </p>
                 <TitleProjectsDescription title='Backend' />
                 <p class>
-                  I had to fetch an API. It was very interesting to do. Get the
-                  information back from a server, and format it to be able to
-                  use this data. It has been very interesting to do.
+                  I had to fetch an API, get the information back from a server,
+                  and format it to be able to use this data. It has been very
+                  interesting to do.
                 </p>
                 <TitleProjectsDescription title='Database' />
                 <p class>
