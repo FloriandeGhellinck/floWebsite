@@ -3,6 +3,7 @@ import About from '../components/aboutSection/description/about_section';
 import FooterSection from '../components/footerSection/footer';
 import { useRef, useState } from 'react';
 import Navbar from '../components/navbar_main_page';
+import ReactDOM from 'react-dom';
 
 export default function Home({}) {
   const aboutMeSectionRef = useRef(null);

@@ -145,6 +145,6 @@ module.exports = {
       '7xl': '4.3rem',
     },
   },
-  darkMode: 'class',
+
   plugins: [],
 };

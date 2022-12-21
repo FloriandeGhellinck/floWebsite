@@ -1,8 +1,8 @@
 import SkillsSection from '../myskills/myskills';
 import AboutmeTitle from '../aboutSectionTitle';
 import AboutMe from './about_me';
+
 import AboutMeImage from './about_me_image';
-import ExportSpotify from '../../../pages/api/spotify';
 
 const About = ({ aboutMeSectionRef, setOpenModal }) => {
   return (

@@ -44,7 +44,7 @@ const Temoins = () => {
                 <TitleProjectsDescription title='Used Technologies' />
                 <SkillsList title='' items={embillardTechnos} />
                 <TitleProjectsDescription title='Frontend' />
-                <p class>
+                <p>
                   This projects was a very small project developed in juste one
                   day. It's certainly not a big project, but it was really cool
                   to be able to develop a small personal project in less than

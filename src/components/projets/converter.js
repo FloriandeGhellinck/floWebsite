@@ -44,7 +44,7 @@ const ConverterProject = () => {
                 <TitleProjectsDescription title='Used Technologies' />
                 <SkillsList title='' items={embillardTechnos} />
                 <TitleProjectsDescription title='Frontend' />
-                <p class>
+                <p>
                   I discovered Tailwind on this project. I also created a blakc
                   and white theme, in order to start playing with libraries. It
                   was a first great single page project to learn how things work

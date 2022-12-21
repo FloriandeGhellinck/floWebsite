@@ -42,19 +42,19 @@ const Weather = () => {
                 <TitleProjectsDescription title='Used Technologies' />
                 <SkillsList title='' items={embillardTechnos} />
                 <TitleProjectsDescription title='Frontend' />
-                <p class>
+                <p>
                   As you can see, this project is not really about frontend. I
                   still created different components to win time and to create
                   cards.
                 </p>
                 <TitleProjectsDescription title='Backend' />
-                <p class>
+                <p>
                   I had to fetch an API, get the information back from a server,
                   and format it to be able to use this data. It has been very
                   interesting to do.
                 </p>
                 <TitleProjectsDescription title='Database' />
-                <p class>
+                <p>
                   There's no database, but the saved items are available in the
                   local storage.
                 </p>

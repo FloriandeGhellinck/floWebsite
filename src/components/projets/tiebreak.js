@@ -42,7 +42,7 @@ const TiebreakProject = () => {
                 <TitleProjectsDescription title='Used Technologies' />
                 <SkillsList title='' items={embillardTechnos} />
                 <TitleProjectsDescription title='Frontend' />
-                <p class>
+                <p>
                   This application allows a tennis player to reserve a court and
                   pay in just a few clicks. Moreover, it allows a club manager
                   to quickly free up slots and collect data on court occupancy

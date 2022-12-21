@@ -1,7 +1,6 @@
 import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { send } from 'emailjs-com';
-import { PhoneMissedCallIcon } from '@heroicons/react/outline';
 
 const errorInit = {
   firstName: false,
@@ -121,7 +120,7 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
                               Firstname<span className='text-red-500'>*</span>
                             </label>
                             <input
-                              autocomplete='on'
+                              autoComplete='on'
                               name='from_firstname'
                               id='firstName'
                               type='text'
@@ -135,7 +134,7 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
                               Lastname<span className='text-red-500'>*</span>
                             </label>
                             <input
-                              autocomplete='on'
+                              autoComplete='on'
                               name='from_lastname'
                               id='lastName'
                               type='text'
@@ -147,7 +146,7 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
                           <div>
                             <label htmlFor='phone'>Phone</label>
                             <input
-                              autocomplete='on'
+                              autoComplete='on'
                               name='from_phone'
                               id='phone'
                               type='tel'
@@ -160,7 +159,7 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
                               Email<span className='text-red-500'>*</span>
                             </label>
                             <input
-                              autocomplete='on'
+                              autoComplete='on'
                               name='from_email'
                               id='email'
                               type='email'

@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import ReactPortal, { createDiv } from './portal';
+import { useState } from 'react';
 import ContactMeModal from './contactMeSection/contactMeModal';
 
 const Navbar = ({ children, openModal, setOpenModal }) => {
@@ -13,17 +15,32 @@ const Navbar = ({ children, openModal, setOpenModal }) => {
 };
 
 const NavContent = ({ openModal, setOpenModal }) => {
+  // const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
+      {/* <ReactPortal isOpen={isOpen}>
+        <button onClick={() => setIsOpen(false)}>Close</button>
+        <ContactMeModal openModal={isOpen} setOpenModal={setIsOpen} />
+      </ReactPortal> */}
       <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 fixed w-full z-10 '>
         <div className='relative flex h-16 items-center justify-between'>
           <div className='flex flex-1 justify-center sm:justify-end '>
             <div className='sm:ml-6 backdrop-blur-sm'>
               <div className='flex align-right space-x-4 hover:cursor-pointer'>
+                {/* {typeof document !== 'undefined' &&
+                  ReactDOM.createPortal(
+                    <ContactMeModal
+                      openModal={openModal}
+                      setOpenModal={setOpenModal}
+                    />,
+                    document.getElementById('portal-modal')
+                  )} */}
                 <ContactMeModal
                   openModal={openModal}
                   setOpenModal={setOpenModal}
                 />
+
                 <motion.a
                   whileHover={{ scale: 1.2 }}
                   onHoverStart={(e) => {}}

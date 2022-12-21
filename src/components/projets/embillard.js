@@ -48,7 +48,7 @@ const EmbillardProject = () => {
                 <TitleProjectsDescription title='Used Technologies' />
                 <SkillsList title='' items={embillardTechnos} />
                 <TitleProjectsDescription title='Frontend' />
-                <p class>
+                <p>
                   This projects was the opportunity to train my Tailwind skills.
                   I totally agree that the design isn't beautiful, but I had the
                   opportunity to have a better understanding about how divs work
@@ -56,14 +56,14 @@ const EmbillardProject = () => {
                   responsiveness, the different components...
                 </p>
                 <TitleProjectsDescription title='Backend' />
-                <p class>
+                <p>
                   I had to develop a small backend in order to let people login
                   in the app to enter their scores. It's just a call to the
                   database in order to compare the passwords and allow access or
                   not.
                 </p>
                 <TitleProjectsDescription title='Database' />
-                <p class>
+                <p>
                   A database has been created for this project. This database
                   has been constructed to create user's profiles and to manage
                   their participations to games.
