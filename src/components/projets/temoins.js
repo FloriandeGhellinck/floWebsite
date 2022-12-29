@@ -47,8 +47,7 @@ const Temoins = () => {
                 <p>
                   This projects was a very small project developed in one day.
                   It's certainly not a big project, but it was really cool to be
-                  able to develop a small personal project in less than 10
-                  hours.
+                  able to develop a personal project in less than 10 hours.
                 </p>
                 {/* <p>
                   {' '}
