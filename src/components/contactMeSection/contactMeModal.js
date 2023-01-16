@@ -68,14 +68,6 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
       setOpenModal(false);
       setFormSubmitSuccesfull(false);
     }, 3000);
-
-    //   fetch('http://localhost:3000/blogs', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify(blog),
-    //   }).then(() => {
-    //     console.log('New blog added');
-    //   });
   };
   return (
     <>
