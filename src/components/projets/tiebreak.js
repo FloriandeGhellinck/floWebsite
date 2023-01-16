@@ -1,6 +1,7 @@
 import AboutmeTitle from '../aboutSection/aboutSectionTitle';
 import SkillsList from '../aboutSection/myskills/list';
 import TitleProjectsDescription from './titleSection';
+import Card from '../card';
 
 const TiebreakProject = () => {
   const embillardTechnos = [
@@ -14,49 +15,47 @@ const TiebreakProject = () => {
 
   return (
     <>
-      <div className='flex flex-col sm:flex-row p-2 gap-1 md:w-1/2 w-full'>
-        <div className=' bg-white border-2 p-3 flex flex-col'>
-          <AboutmeTitle title='TieBreak' />
-          <div className='font-poppins'>
-            <div className='flex flex-col text-justify m-5'>
-              <div className='m-1 text-black '>
-                <p>
-                  TieBreak is the final project of my education at la Capsule.
-                  it has been developed with Killian Gemoets. It's a web
-                  application to book a tennis court.
-                </p>{' '}
-                <br />
-                <p>
-                  Click{' '}
-                  <a
-                    href='https://tiebreak.netlify.app/'
-                    target='_blank'
-                    className='font-bold'
-                  >
-                    {' '}
-                    HERE
-                  </a>{' '}
-                  to check it out.
-                </p>
-                <br />
-                <TitleProjectsDescription title='Used Technologies' />
-                <SkillsList title='' items={embillardTechnos} />
-                <TitleProjectsDescription title='Frontend' />
-                <p>
-                  This application allows a tennis player to reserve a court and
-                  pay in just a few clicks. Moreover, it allows a club manager
-                  to quickly free up slots and collect data on court occupancy
-                  rates. It was really interesting to work on the interaction
-                  between the player side and the club side. In addition, we
-                  implemented different tools like an interactive map, an
-                  interactive calendar, statistics charts, a payment method, a
-                  cloud-based image management service, etc.
-                </p>
-              </div>
+      <Card>
+        <AboutmeTitle title='TieBreak' />
+        <div className='font-poppins'>
+          <div className='flex flex-col text-justify m-5'>
+            <div className='m-1 text-black '>
+              <p>
+                TieBreak is the final project of my education at la Capsule. it
+                has been developed with Killian Gemoets. It's a web application
+                to book a tennis court.
+              </p>{' '}
+              <br />
+              <p>
+                Click{' '}
+                <a
+                  href='https://tiebreak.netlify.app/'
+                  target='_blank'
+                  className='font-bold'
+                >
+                  {' '}
+                  HERE
+                </a>{' '}
+                to check it out.
+              </p>
+              <br />
+              <TitleProjectsDescription title='Used Technologies' />
+              <SkillsList title='' items={embillardTechnos} />
+              <TitleProjectsDescription title='About' />
+              <p>
+                This application allows a tennis player to reserve a court and
+                pay in just a few clicks. Moreover, it allows a club manager to
+                quickly free up slots and collect data on court occupancy rates.
+                It was really interesting to work on the interaction between the
+                player side and the club side. In addition, we implemented
+                different tools like an interactive map, an interactive
+                calendar, statistics charts, a payment method, a cloud-based
+                image management service, etc.
+              </p>
             </div>
           </div>
         </div>
-      </div>
+      </Card>
     </>
   );
 };

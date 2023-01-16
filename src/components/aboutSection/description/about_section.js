@@ -10,24 +10,16 @@ const About = ({ aboutMeSectionRef, setOpenModal }) => {
       className='flex flex-col md:flex-row m-2 gap-1'
       ref={aboutMeSectionRef}
     >
-      <div className='w-full md:w-1/2 bg-white border-2 px-3 pt-3 flex flex-col'>
+      <div className='w-full md:w-1/2 bg-white border-4 rounded-lg border-black px-3 pt-3 flex flex-col'>
         {/* <ExportSpotify /> */}
         <AboutmeTitle title='ABOUT ME' />
         <AboutMeImage />
         <AboutMe setOpenModal={setOpenModal} />
       </div>
-      <div className='w-full md:w-1/2 bg-white border-2 px-3 pt-3"'>
+      <div className='w-full md:w-1/2 bg-white  px-3 pt-3 border-4 rounded-lg border-black'>
         <AboutmeTitle title='SKILLS' />
         <SkillsSection />
       </div>
-
-      {/* <div className='flex-col bg-blue-500 h-full'>
-          
-        </div> */}
-
-      {/* <div className='row-start-2 col-start-2'>PHOTO</div>
-
-      <div className='row-start-3 col-start-6'>Skills</div> */}
     </div>
   );
 };
