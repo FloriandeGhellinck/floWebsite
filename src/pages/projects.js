@@ -18,7 +18,7 @@ const Projects = () => {
           <ProjectsHomePage />
           <div className='flex justify-center items-center font-poppins my-10 flex-col '>
             <h1 className='text-3xl'> Projects Page</h1> <br />
-            <p className='w-9/12 md:w-6/12 text-xl text-justify'>
+            <p className='w-9/12 md:w-6/12 lg:text-xl text-base text-justify'>
               {' '}
               Welcome on my projects section. You'll find here some of the
               projects I worked on. I tried to show the used technologies for

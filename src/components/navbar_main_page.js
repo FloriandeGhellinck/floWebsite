@@ -40,7 +40,15 @@ const NavContent = ({ openModal, setOpenModal }) => {
                   openModal={openModal}
                   setOpenModal={setOpenModal}
                 />
-
+                <motion.a
+                  whileHover={{ scale: 1.2 }}
+                  onHoverStart={(e) => {}}
+                  onHoverEnd={(e) => {}}
+                  href='/'
+                  className='text-gray-700 dark:text-white hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
+                >
+                  Home
+                </motion.a>
                 <motion.a
                   whileHover={{ scale: 1.2 }}
                   onHoverStart={(e) => {}}
@@ -58,15 +66,6 @@ const NavContent = ({ openModal, setOpenModal }) => {
                   className='text-gray-700 dark:text-white hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                 >
                   Projects
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.2 }}
-                  onHoverStart={(e) => {}}
-                  onHoverEnd={(e) => {}}
-                  href='/'
-                  className='text-gray-700 dark:text-white hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
-                >
-                  Home
                 </motion.a>
               </div>
             </div>
