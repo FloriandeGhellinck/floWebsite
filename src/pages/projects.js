@@ -42,7 +42,7 @@ const Projects = () => {
               Regarding the methodology, I mainly worked with Hasura,
               Typescript, React and NextJS on those specific projects. To
               achieve these new features and fixes, I received "carts" on Notion
-              with some instructions.
+              with some instructions..
             </p>
           </div>
           <div className='flex p-2 flex-col w-full'>
