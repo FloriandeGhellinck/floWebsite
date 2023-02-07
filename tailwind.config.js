@@ -143,6 +143,7 @@ module.exports = {
       '5xl': '3.052rem',
       '6xl': '3.65rem',
       '7xl': '4.3rem',
+      '8xl': '4.9rem',
     },
   },
 
