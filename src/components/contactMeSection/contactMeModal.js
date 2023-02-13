@@ -46,7 +46,7 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
     setOpenModal(false);
   };
 
-  const isButtonEnabled = !isValid;
+  const isButtonActive = isValid;
 
   return (
     <>
@@ -154,9 +154,9 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
                           {
                             <Button
                               className={`${
-                                isButtonEnabled ? 'bg-gray-50' : 'bg-blue-300'
+                                isButtonActive ? ' bg-blue-300' : 'bg-gray-50'
                               } ${isSubmitSuccessful ? 'hidden' : ''}`}
-                              disabled={isButtonEnabled}
+                              disabled={!isButtonActive}
                             >
                               Submit
                             </Button>
@@ -181,94 +181,3 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
 };
 
 export default ContactMeModal;
-
-/*
-<form onSubmit={handleSubmit(onSubmit())}>
-  <div className='gap-3 text-center sm:grid sm:grid-cols-2 flex flex-col'>
-    <div className=''>
-      <label htmlFor='lastName'>
-        Firstname<span className='text-red-500'>*</span>
-      </label>
-      <input
-        {...register('firstname')}
-        autoComplete='on'
-        id='firstName'
-        type='text'
-        className='border-2 w-full pl-2'
-        placeholder='First Name'
-
-        //   value={toSend.from_firstname}
-      />
-
-    </div>
-    <div>
-      <label htmlFor='lastName'>
-        Lastname<span className='text-red-500'>*</span>
-      </label>
-      <input
-        {...register('lastname')}
-        autoComplete='on'
-        id='lastName'
-        type='text'
-        className='border-2 w-full ml-2'
-
-        //   value={toSend.from_lastname}
-      />
-      {/* {error.lastName && <RequiredField />} */
-/*</div>
-    <div>
-      <label htmlFor='phone'>Phone</label>
-      <input
-        {...register('phone')}
-        autoComplete='on'
-        id='phone'
-        type='tel'
-        className='border-2 w-full'
-        //   value={toSend.phone}
-      />
-    </div>
-    <div>
-      <label htmlFor='email'>
-        Email<span className='text-red-500'>*</span>
-      </label>
-      <input
-        autoComplete='on'
-        name='email'
-        id='email'
-        type='email'
-        className='border-2 w-full'
-        //   value={toSend.email}
-      />
-      {/* {error.email && <RequiredField />} */
-/* </div>
-  </div>
-  <div className='mt-3'>
-    <label htmlFor='message'>
-      Message<span className='text-red-500'>*</span>
-    </label>
-    <textarea
-      name='message'
-      id='message'
-      type='text'
-      className='border-2 w-full h-20'
-      // value={toSend.from_message}
-    />
-    {/* {error.message && <RequiredField />} */
-/*</div>
-  {/* <div className='mt-3'>
-  {!formSubmitSuccesfull && (
-    <Button className='bg-blue-300'>Submit</Button>
-  )}
-  {formSubmitSuccesfull && (
-    <p className='text-green-700'>
-      Thanks for your message
-    </p>
-  )}
-</div> */
-/*<div>
-    {' '}
-    <input type='submit' />
-  </div>
-</form>
-
-*/
