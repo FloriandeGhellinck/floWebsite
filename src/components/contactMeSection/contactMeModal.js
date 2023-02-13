@@ -13,10 +13,6 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
     reset,
   } = useForm();
 
-  // useEffect(() => {
-
-  // }, [isSubmitSuccessful, reset]);
-
   const onSubmit = () => {
     const resultsTosend = {
       firstname: watch('firstName'),
