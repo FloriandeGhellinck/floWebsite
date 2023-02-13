@@ -1,49 +1,37 @@
-import { Fragment, useState } from 'react';
+import { React, Fragment, useState, useEffect } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { send } from 'emailjs-com';
 import Button from '../button';
-
-const errorInit = {
-  firstName: false,
-  lastName: false,
-  email: false,
-  message: false,
-};
+import { useForm } from 'react-hook-form';
 
 const ContactMeModal = ({ openModal, setOpenModal }) => {
-  const [error, setError] = useState(errorInit);
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors, isValid, isSubmitSuccessful },
+    reset,
+  } = useForm();
 
-  const [formSubmitSuccesfull, setFormSubmitSuccesfull] = useState(false);
+  // useEffect(() => {
 
-  const setCloseModal = () => {
-    setOpenModal(false);
-    setError(errorInit);
-  };
+  // }, [isSubmitSuccessful, reset]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const { firstName, lastName, phone, email, message } = e.target;
-
-    if (!firstName.value || !lastName.value || !email.value || !message.value) {
-      setError({
-        firstName: !firstName.value,
-        lastName: !lastName.value,
-        email: !email.value,
-        message: !message.value,
-      });
-
-      return;
-    }
-
-    setError(errorInit);
+  const onSubmit = () => {
     const resultsTosend = {
-      from_firstname: firstName.value,
-      from_lastname: lastName.value,
-      from_phone: phone.value,
-      from_email: email.value,
-      from_message: message.value,
+      firstname: watch('firstName'),
+      lastname: watch('lastName'),
+      phone: watch('phone'),
+      email: watch('email'),
+      message: watch('message'),
     };
-
+    reset(() => ({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      message: '',
+    }));
     send(
       'service_rscfymr',
       'template_yku03a4',
@@ -56,19 +44,14 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
       .catch((err) => {
         console.log('FAILED...', err);
       });
-
-    firstName.value = '';
-    lastName.value = '';
-    phone.value = '';
-    email.value = '';
-    message.value = '';
-    setFormSubmitSuccesfull(true);
-
-    setTimeout(() => {
-      setOpenModal(false);
-      setFormSubmitSuccesfull(false);
-    }, 3000);
   };
+
+  const setCloseModal = () => {
+    setOpenModal(false);
+  };
+
+  const isButtonEnabled = !isValid;
+
   return (
     <>
       <Transition.Root show={openModal} as={Fragment}>
@@ -106,80 +89,83 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
                         Contact Me
                       </Dialog.Title>
                       {/* <form> */}
-                      <form onSubmit={(e) => handleSubmit(e)}>
+                      <form onSubmit={handleSubmit(onSubmit)}>
                         <div className='gap-3 text-center sm:grid sm:grid-cols-2 flex flex-col'>
-                          <div className=''>
-                            <label htmlFor='firstName' className=''>
-                              Firstname<span className='text-red-500'>*</span>
-                            </label>
+                          <div>
                             <input
-                              autoComplete='on'
-                              name='from_firstname'
-                              id='firstName'
-                              type='text'
-                              className='border-2 w-full'
-                              //   value={toSend.from_firstname}
+                              {...register('firstName', {
+                                required: 'Firstname required',
+                              })}
+                              placeholder='First name'
+                              className='border-2 w-full '
                             />
-                            {error.firstName && <RequiredField />}
+                            <p className='text-left text-red-500'>
+                              {errors.firstName?.message}
+                            </p>
                           </div>
                           <div>
-                            <label htmlFor='lastName'>
-                              Lastname<span className='text-red-500'>*</span>
-                            </label>
                             <input
-                              autoComplete='on'
-                              name='from_lastname'
-                              id='lastName'
-                              type='text'
-                              className='border-2 w-full'
-                              //   value={toSend.from_lastname}
+                              {...register('lastName', {
+                                required: 'Lastname required',
+                              })}
+                              placeholder='Last name'
+                              className='border-2 w-full '
                             />
-                            {error.lastName && <RequiredField />}
+                            <p className='text-left text-red-500'>
+                              {errors.lastName?.message}
+                            </p>
                           </div>
                           <div>
-                            <label htmlFor='phone'>Phone</label>
                             <input
-                              autoComplete='on'
-                              name='from_phone'
-                              id='phone'
-                              type='tel'
-                              className='border-2 w-full'
-                              //   value={toSend.from_phone}
+                              {...register('email', {
+                                required: 'Email is required',
+                                pattern: {
+                                  value:
+                                    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                                  message: ' Wrong pattern',
+                                },
+                              })}
+                              placeholder='Email'
+                              className='border-2 w-full '
                             />
+                            <p className='text-left text-red-500'>
+                              {errors.email?.message}
+                            </p>
                           </div>
                           <div>
-                            <label htmlFor='email'>
-                              Email<span className='text-red-500'>*</span>
-                            </label>
                             <input
-                              autoComplete='on'
-                              name='from_email'
-                              id='email'
-                              type='email'
+                              {...register('phone', {
+                                required: false,
+                              })}
+                              placeholder='Phone'
                               className='border-2 w-full'
-                              //   value={toSend.from_email}
                             />
-                            {error.email && <RequiredField />}
                           </div>
                         </div>
-                        <div className='mt-3'>
-                          <label htmlFor='message'>
-                            Message<span className='text-red-500'>*</span>
-                          </label>
+                        <div className='w-full mt-3'>
                           <textarea
-                            name='from_message'
-                            id='message'
-                            type='text'
-                            className='border-2 w-full h-20'
-                            // value={toSend.from_message}
+                            {...register('message', {
+                              required: 'This field is required',
+                            })}
+                            placeholder='Message'
+                            className='border-2 w-full h-20 col-span-2'
                           />
-                          {error.message && <RequiredField />}
+                          <p className='text-left text-red-500'>
+                            {errors.message?.message}
+                          </p>
                         </div>
                         <div className='mt-3'>
-                          {!formSubmitSuccesfull && (
-                            <Button className='bg-blue-300'>Submit</Button>
-                          )}
-                          {formSubmitSuccesfull && (
+                          {
+                            <Button
+                              className={`${
+                                isButtonEnabled ? 'bg-gray-50' : 'bg-blue-300'
+                              } ${isSubmitSuccessful ? 'hidden' : ''}`}
+                              disabled={isButtonEnabled}
+                            >
+                              Submit
+                            </Button>
+                          }
+                          {isSubmitSuccessful && (
                             <p className='text-green-700'>
                               Thanks for your message
                             </p>
@@ -198,8 +184,95 @@ const ContactMeModal = ({ openModal, setOpenModal }) => {
   );
 };
 
-const RequiredField = () => {
-  return <p className='text-left text-red-500 text-sm'>Required field</p>;
-};
-
 export default ContactMeModal;
+
+/*
+<form onSubmit={handleSubmit(onSubmit())}>
+  <div className='gap-3 text-center sm:grid sm:grid-cols-2 flex flex-col'>
+    <div className=''>
+      <label htmlFor='lastName'>
+        Firstname<span className='text-red-500'>*</span>
+      </label>
+      <input
+        {...register('firstname')}
+        autoComplete='on'
+        id='firstName'
+        type='text'
+        className='border-2 w-full pl-2'
+        placeholder='First Name'
+
+        //   value={toSend.from_firstname}
+      />
+
+    </div>
+    <div>
+      <label htmlFor='lastName'>
+        Lastname<span className='text-red-500'>*</span>
+      </label>
+      <input
+        {...register('lastname')}
+        autoComplete='on'
+        id='lastName'
+        type='text'
+        className='border-2 w-full ml-2'
+
+        //   value={toSend.from_lastname}
+      />
+      {/* {error.lastName && <RequiredField />} */
+/*</div>
+    <div>
+      <label htmlFor='phone'>Phone</label>
+      <input
+        {...register('phone')}
+        autoComplete='on'
+        id='phone'
+        type='tel'
+        className='border-2 w-full'
+        //   value={toSend.phone}
+      />
+    </div>
+    <div>
+      <label htmlFor='email'>
+        Email<span className='text-red-500'>*</span>
+      </label>
+      <input
+        autoComplete='on'
+        name='email'
+        id='email'
+        type='email'
+        className='border-2 w-full'
+        //   value={toSend.email}
+      />
+      {/* {error.email && <RequiredField />} */
+/* </div>
+  </div>
+  <div className='mt-3'>
+    <label htmlFor='message'>
+      Message<span className='text-red-500'>*</span>
+    </label>
+    <textarea
+      name='message'
+      id='message'
+      type='text'
+      className='border-2 w-full h-20'
+      // value={toSend.from_message}
+    />
+    {/* {error.message && <RequiredField />} */
+/*</div>
+  {/* <div className='mt-3'>
+  {!formSubmitSuccesfull && (
+    <Button className='bg-blue-300'>Submit</Button>
+  )}
+  {formSubmitSuccesfull && (
+    <p className='text-green-700'>
+      Thanks for your message
+    </p>
+  )}
+</div> */
+/*<div>
+    {' '}
+    <input type='submit' />
+  </div>
+</form>
+
+*/
