@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
         <title> Florian de Ghellinck</title>
         <meta
           name='description'
-          content="Florian de Ghellinck's personal website"
+          content='Florian de Ghellinck personal website'
         />
         <link
           rel='icon'
