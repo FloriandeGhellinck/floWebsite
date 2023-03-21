@@ -19,9 +19,9 @@ const NavContent = ({ openModal, setOpenModal }) => {
 
   return (
     <>
-      <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 fixed w-full z-10 '>
+      <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 fixed w-full z-10'>
         <div className='relative flex h-16 items-center justify-between'>
-          <div className='flex flex-1 justify-center sm:justify-end '>
+          <div className='flex flex-1 justify-center sm:justify-end'>
             <div className='sm:ml-6 backdrop-blur-sm'>
               <div className='flex align-right space-x-4 hover:cursor-pointer'>
                 <ContactMeModal
