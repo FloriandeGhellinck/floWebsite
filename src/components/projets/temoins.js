@@ -17,7 +17,7 @@ const Temoins = () => {
       <Card>
         <AboutmeTitle title="TEMOINS" />
         <div className="font-poppins">
-          <div className="flex flex-col text-justify m-5">
+          <div className="flex flex-col text-justify m-4">
             <div className="m-1 text-black ">
               <p>Temoin project is a personal project developed to ask to my best friend if they want to be my best man for my wedding.</p>{" "}
               <br />
