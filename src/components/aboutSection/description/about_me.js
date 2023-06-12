@@ -30,7 +30,7 @@ const AboutMe = ({ setOpenModal }) => {
           <br />
           <p>
             In March 2022, I made a bold decision to change careers and go into web development. Since then, my path has been marked by a
-            constant passion for learning and improving my skills.
+            constant passion for learning and improving my skills.{" "}
           </p>
           <br />
           <p>
