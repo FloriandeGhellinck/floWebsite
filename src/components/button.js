@@ -1,4 +1,4 @@
-const Button = ({ children, props, className }) => {
+const Button = ({ children, className, ...props }) => {
   return (
     <button
       {...props}
@@ -8,7 +8,5 @@ const Button = ({ children, props, className }) => {
     </button>
   );
 };
-
-<Button type='submit'> Submit</Button>;
 
 export default Button;
