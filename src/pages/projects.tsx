@@ -220,7 +220,7 @@ const Projects: FC = () => {
             {
               langage: "GraphQL",
               width: "100%",
-              image: "/technos/graphQL.png",
+              image: "/technos/graphql.png",
             },
             {
               langage: "Hasura",
