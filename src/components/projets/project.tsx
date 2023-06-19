@@ -7,7 +7,7 @@ import { MappedProjects } from "../../types/projects";
 
 const Project: FC<{ project: MappedProjects }> = ({ project }) => {
   return (
-    <Card className="lg:h-[100rem] xl:h-[75rem]">
+    <Card className="lg:h-[110rem] xl:h-[75rem]">
       <AboutTitle title={project.title} />
       <div className="font-poppins">
         <div className="flex flex-col text-justify m-5">
