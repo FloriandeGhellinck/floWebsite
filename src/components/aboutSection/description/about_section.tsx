@@ -8,7 +8,6 @@ const About: FC<{ setOpenModal: Dispatch<SetStateAction<boolean>> }> = ({ setOpe
   return (
     <div className="flex flex-col md:flex-row m-2 gap-1">
       <div className="w-full md:w-1/2 bg-white border-4 rounded-lg  px-3 pt-3 flex flex-col">
-        {/* <ExportSpotify /> */}
         <AboutTitle title="about me" />
         <AboutMeImage />
         <AboutMe setOpenModal={setOpenModal} />

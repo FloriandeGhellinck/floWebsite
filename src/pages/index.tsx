@@ -3,8 +3,9 @@ import About from "../components/aboutSection/description/about_section";
 import FooterSection from "../components/footerSection/footer";
 import { useState } from "react";
 import Navbar from "../components/navbar_main_page";
+import { AppProps } from "next/app";
 
-export default function Home({}) {
+export default function Home({}: AppProps) {
   const [openModal, setOpenModal] = useState(false);
   return (
     <>

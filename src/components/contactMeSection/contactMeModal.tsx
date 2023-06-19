@@ -77,7 +77,6 @@ const ContactMeModal: FC<{ openModal: boolean; setOpenModal: Dispatch<SetStateAc
                       <Dialog.Title as="h3" className="text-lg leading-6 text-gray-900 dark:text-white content-center font-extrabold mb-5">
                         Contact Me
                       </Dialog.Title>
-                      {/* <form> */}
                       <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="gap-3 text-center sm:grid sm:grid-cols-2 flex flex-col">
                           <div>

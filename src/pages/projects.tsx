@@ -323,7 +323,7 @@ const Projects: FC = () => {
     <>
       <Navbar openModal={openModal} setOpenModal={setOpenModal}>
         <ProjectsHomePage />
-        <div className="flex justify-center items-center font-poppins pb-10 flex-col bg-black px-4 md:px-7 lg:px-14 gap-y-10 h-auto">
+        <div className="flex justify-center items-center font-poppins py-10 flex-col bg-black px-4 md:px-7 lg:px-14 gap-y-10 h-auto">
           <h1 className="text-3xl lg:text-5xl font-monserrat text-white"> Projects Page</h1>
           <div className="w-full flex flex-col md:flex-row supports-[gap]:gap-x-5 supports-[gap]:gap-y-5 items-center pb-10">
             <button
@@ -359,7 +359,6 @@ const Projects: FC = () => {
             </div>
           </div>
         </div>
-
         <FooterSection />
       </Navbar>
     </>

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ContactMeModal from "../contactMeSection/contactMeModal";
 import { FC } from "react";
 
 const ProjectsHomePage: FC = () => {

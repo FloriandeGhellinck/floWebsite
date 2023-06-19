@@ -1,4 +1,6 @@
-const Button = ({ children, className, ...props }) => {
+import { FC, ReactNode } from "react";
+
+const Button: FC<{ children: ReactNode; className: string }> = ({ children, className, ...props }) => {
   return (
     <button
       {...props}

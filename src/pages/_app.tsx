@@ -1,9 +1,8 @@
 import "../styles/globals.css";
 import Head from "next/head";
-import { ThemeProvider } from "next-themes";
-import { useState } from "react";
+import { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -15,9 +14,7 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       </Head>
-      {/* <ThemeProvider attribute='class'> */}
       <Component {...pageProps} />
-      {/* </ThemeProvider> */}
     </>
   );
 }
