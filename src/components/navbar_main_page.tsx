@@ -67,7 +67,7 @@ const NavContent: FC<{ openModal: boolean; setOpenModal: Dispatch<SetStateAction
                   onHoverStart={(e) => {}}
                   onHoverEnd={(e) => {}}
                   href="/"
-                  className="text-gray-700 dark:text-white hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-gray-700 dark:text-white hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-base font-medium"
                 >
                   Home
                 </motion.a>
@@ -76,7 +76,7 @@ const NavContent: FC<{ openModal: boolean; setOpenModal: Dispatch<SetStateAction
                   onHoverStart={(e) => {}}
                   onHoverEnd={(e) => {}}
                   onClick={() => setOpenModal(true)}
-                  className="text-gray-700 dark:text-white hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-gray-700 dark:text-white hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-base font-medium"
                 >
                   Contact Me
                 </motion.a>
@@ -85,7 +85,7 @@ const NavContent: FC<{ openModal: boolean; setOpenModal: Dispatch<SetStateAction
                   onHoverStart={(e) => {}}
                   onHoverEnd={(e) => {}}
                   href="/projects"
-                  className="text-gray-700 dark:text-white hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-gray-700 dark:text-white hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-base font-medium"
                 >
                   Projects
                 </motion.a>

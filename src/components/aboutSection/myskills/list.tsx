@@ -4,10 +4,10 @@ import Image from "next/image";
 import { Skills } from "../../../types/skills";
 import { FC } from "react";
 
-const SkillsList: FC<{ items: Skills[]; title?: string }> = ({ items, title }) => {
+const SkillsList: FC<{ items: Skills[]; title?: string; className?: string }> = ({ className, items, title }) => {
   return (
     <>
-      <div className="font-poppins text-black font-extrabold text-2xl text-center py-2">
+      <div className={`font-poppins text-black font-extrabold text-2xl text-center py-2 ${className}`}>
         <div className={`${title ? "m-3" : "hidden"}`}>
           <h1>{title}</h1>
         </div>

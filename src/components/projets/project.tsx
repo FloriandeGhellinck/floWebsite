@@ -7,28 +7,27 @@ import { MappedProjects } from "../../types/projects";
 
 const Project: FC<{ project: MappedProjects }> = ({ project }) => {
   return (
-    <Card className="lg:h-[110rem] xl:h-[75rem]">
-      <AboutTitle title={project.title} />
-      <div className="font-poppins">
-        <div className="flex flex-col text-justify m-5">
-          <div className="m-1 text-black ">
-            <p className="h-1/6">{project.description}</p> <br />
-            <p className="text-center h-1/6">
+    <div className="bg-white border-4 px-4 rounded-lg border-black">
+      <AboutTitle title={project.title} className="" />
+      <div className="font-poppins ">
+        <div className="flex flex-col text-justify m-5 ">
+          <div className="m-1 text-black gap-y-4 flex flex-col">
+            <p className="lg:h-36 xl:h-28 2xl:h-24 ">{project.description}</p>
+            <p className="text-center grow h-full">
               Click{" "}
               <a href={project.url} target="_blank" className="font-bold">
                 HERE
               </a>{" "}
               to check it out.
             </p>
-            <br />
             <TitleProjectsDescription title="Used Technologies" />
-            <SkillsList items={project.technologies} />
+            <SkillsList items={project.technologies} className="lg:h-[34em] xl:h-[25em]" />
             <TitleProjectsDescription title="About" />
-            <p>{project.additional_note}</p>
+            <p className="lg:h-[35em] xl:h-[25em] 2xl:h-[20em]">{project.additional_note}</p>
           </div>
         </div>
       </div>
-    </Card>
+    </div>
   );
 };
 

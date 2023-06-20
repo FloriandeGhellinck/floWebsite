@@ -1,18 +1,8 @@
 import { FC, useState } from "react";
 import FooterSection from "../components/footerSection/footer";
 import Navbar from "../components/navbar_main_page";
-import ConverterProject from "../components/projets/converter";
-import EmbillardProject from "../components/projets/embillard";
-import Temoins from "../components/projets/temoins";
-import TicTacToeProject from "../components/projets/tictactoe";
-import TiebreakProject from "../components/projets/tiebreak";
-import Weather from "../components/projets/weather";
 import ProjectsHomePage from "../components/welcomeSection/welcomeProjectsPage";
-import Button from "../components/button";
-import Card from "../components/card";
-import AboutTitle from "../components/aboutSection/aboutSectionTitle";
-import TitleProjectsDescription from "../components/projets/titleSection";
-import SkillsList from "../components/aboutSection/myskills/list";
+
 import Project from "../components/projets/project";
 import map from "lodash/map";
 import { ProjectsToSwitch } from "../types/projects";
@@ -55,6 +45,11 @@ const Projects: FC = () => {
               langage: "ExpressJS",
               width: "100%",
               image: "/technos/express.png",
+            },
+            {
+              langage: "JavaScript",
+              width: "100%",
+              image: "/technos/javascript.png",
             },
             {
               langage: "mongoDB",
@@ -351,7 +346,7 @@ const Projects: FC = () => {
             <div className=" flex  gap-y-4 flex-col px-4 w-full">
               <h1 className="underline font-bold text-3xl text-center pt-5"> About this section</h1>
               <p className="text-base text-black text-center lg:px-20 px-4">{activeSectionData.section_description}</p>
-              <div className="flex flex-col lg:flex-row items-center lg:items-start flex-wrap gap-y-3 pb-5">
+              <div className="flex flex-col lg:grid lg:grid-cols-2 items-center lg:items-start flex-wrap gap-y-3 pb-5 gap-x-4">
                 {map(activeSectionData.section_projects, (eachProject, index) => {
                   return <Project project={eachProject} key={index} />;
                 })}
