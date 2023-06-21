@@ -131,6 +131,16 @@ const Projects: FC = () => {
               width: "100%",
               image: "/technos/tailwind.png",
             },
+            {
+              langage: "Hasura",
+              width: "100%",
+              image: "/technos/hasura.png",
+            },
+            {
+              langage: "GraphQL",
+              width: "100%",
+              image: "/technos/graphql.png",
+            },
           ],
           additional_note:
             "This projects was the opportunity to train my Tailwind skills. I totally agree that the design isn't beautiful, but I had the opportunity to have a better understanding about how divs work together, how things are rendered, how to play with the responsiveness, the different components.. I had to develop a small backend in order to let people login in the app to enter their scores. It's just a call to the database in order to compare the passwords and allow access or not. A database has been created for this project. This database has been constructed to create user's profiles and to manage their participations to games. This project has been very interesting to understand much better how all of this works together.",

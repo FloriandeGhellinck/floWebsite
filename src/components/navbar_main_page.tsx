@@ -54,7 +54,7 @@ const NavContent: FC<{ openModal: boolean; setOpenModal: Dispatch<SetStateAction
     <>
       <div
         className={`${
-          shouldAppear ? "opacity-100 transition-all duration-700 " : "opacity-0 translate-all duration-700"
+          shouldAppear ? "opacity-100 transition-all duration-700 " : "opacity-0 translate-all duration-700 -z-10"
         }  px-2 sm:px-6 lg:px-8 fixed w-full z-10 `}
       >
         <div className="relative flex h-16 items-center justify-between">
