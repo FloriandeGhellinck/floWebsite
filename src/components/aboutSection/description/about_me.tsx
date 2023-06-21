@@ -12,7 +12,7 @@ const AboutMe: FC<{ setOpenModal: Dispatch<SetStateAction<boolean>> }> = ({ setO
 
   return (
     <div className="font-poppins">
-      <div className="flex flex-col text-justify m-5">
+      <div className="flex flex-col text-justify m-5 gap-y-10">
         <div className="m-1 text-black ">
           <p>
             Welcome to my website! I'm <span className="font-bold">Florian </span>, a {differenceInYears(new Date(), birthDate)} year-old
@@ -64,7 +64,7 @@ const AboutMe: FC<{ setOpenModal: Dispatch<SetStateAction<boolean>> }> = ({ setO
             to working with you!
           </p>
         </div>
-        <div className="flex justify-center items-center my-3">
+        <div className="flex justify-center items-center ">
           <a target="_blank" href="/CV-Florian-de-Ghellinck.pdf" download>
             <button className=" py-2 px-4 rounded-xl text-black border-2 border-primary-orange-100 hover:bg-primary-orange-100 hover:text-white">
               {" "}

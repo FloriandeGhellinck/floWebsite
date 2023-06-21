@@ -7,7 +7,7 @@ import { Dispatch, FC, SetStateAction } from "react";
 const About: FC<{ setOpenModal: Dispatch<SetStateAction<boolean>> }> = ({ setOpenModal }) => {
   return (
     <div className="flex flex-col md:flex-row m-2 gap-1">
-      <div className="w-full md:w-1/2 bg-white border-4 rounded-lg  px-3 pt-3 flex flex-col">
+      <div className="py-5 w-full md:w-1/2 bg-white border-4 rounded-lg  px-3 pt-3 flex flex-col">
         <AboutTitle title="about me" />
         <AboutMeImage />
         <AboutMe setOpenModal={setOpenModal} />
