@@ -1,7 +1,6 @@
 import AboutTitle from "../aboutSection/aboutSectionTitle";
 import SkillsList from "../aboutSection/myskills/list";
 import TitleProjectsDescription from "./titleSection";
-import Card from "../card";
 import { FC } from "react";
 import { MappedProjects } from "../../types/projects";
 
