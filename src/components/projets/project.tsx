@@ -13,10 +13,10 @@ const Project: FC<{ project: MappedProjects }> = ({ project }) => {
           <div className="m-1 text-black gap-y-4 flex flex-col">
             <p className="lg:h-36 xl:h-28 2xl:h-24 ">{project.description}</p>
             <p className="text-center grow h-full">
-              Click{" "}
+              Click
               <a href={project.url} target="_blank" className="font-bold">
                 HERE
-              </a>{" "}
+              </a>
               to check it out.
             </p>
             <TitleProjectsDescription title="Used Technologies" />
