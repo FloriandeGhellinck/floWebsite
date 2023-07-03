@@ -329,13 +329,15 @@ const Projects: FC = () => {
     <>
       <Navbar openModal={openModal} setOpenModal={setOpenModal}>
         <ProjectsHomePage />
-        <div className="flex justify-center items-center font-poppins py-10 flex-col bg-black px-4 md:px-7 lg:px-14 gap-y-10 h-auto">
+        <div
+          className={`flex justify-center items-center font-poppins py-10 flex-col bg-gradient-to-r from-gray-900 to-gray-500 px-4 md:px-7 lg:px-14 gap-y-10 h-auto`}
+        >
           <h1 className="text-3xl lg:text-5xl font-monserrat text-white"> Projects Page</h1>
-          <div className="w-full flex flex-col md:flex-row supports-[gap]:gap-x-5 supports-[gap]:gap-y-5 items-center pb-10">
+          <div className="w-full flex flex-col md:flex-row supports-[gap]:gap-x-5 supports-[gap]:gap-y-5 items-center pb-10 justify-center">
             <button
               className={`border-2 ${
                 activeSection === 0 ? "bg-white text-black" : "bg-black text-white "
-              } border-white w-1/2 lg:p-4 p-2 flex items-center justify-center rounded-3xl `}
+              } border-white lg:w-2/12 w-1/2 lg:p-4 p-2 flex items-center justify-center rounded-3xl `}
               onClick={() => handleActiveSection(0)}
               type="button"
             >
@@ -345,7 +347,7 @@ const Projects: FC = () => {
             <button
               className={`border-2 ${
                 activeSection === 1 ? "bg-white text-black" : "bg-black text-white "
-              } border-white w-1/2 lg:p-4 p-2 flex items-center justify-center rounded-3xl `}
+              } border-white lg:w-2/12 w-1/2 lg:p-4 p-2 flex items-center justify-center rounded-3xl `}
               onClick={() => handleActiveSection(1)}
               type="button"
             >
