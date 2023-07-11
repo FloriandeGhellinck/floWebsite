@@ -65,7 +65,7 @@ const AboutMe: FC<{ setOpenModal: Dispatch<SetStateAction<boolean>> }> = ({ setO
           </p>
         </div>
         <div className="flex justify-center items-center ">
-          <a target="_blank" href="/CV-Florian-de-Ghellinck.pdf" download>
+          <a target="_blank" href="/CV-Florian-de-Ghellinck - EN.pdf" download>
             <button className=" py-2 px-4 rounded-xl text-black border-2 border-primary-orange-100 hover:bg-primary-orange-100 hover:text-white">
               {" "}
               DOWNLOAD MY RESUME
