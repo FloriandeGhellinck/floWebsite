@@ -9,7 +9,7 @@ import { ProjectsToSwitch } from "../types/projects";
 
 const Projects: FC = () => {
   const [openModal, setOpenModal] = useState(false);
-  const [activeSection, setActiveSection] = useState(0);
+  const [activeSection, setActiveSection] = useState(1);
 
   const handleActiveSection = (sectionIndex: number) => {
     setActiveSection(sectionIndex);
