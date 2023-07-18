@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Dispatch, FC, SetStateAction, useEffect, useState } from "react";
 import ContactMeModal from "./contactMeSection/contactMeModal";
 import { ReactNode } from "react";
+import { Router, useRouter } from "next/router";
+import Button from "./button";
 
 const Navbar: FC<{ openModal: boolean; setOpenModal: Dispatch<SetStateAction<boolean>>; children: ReactNode }> = ({
   children,
@@ -20,6 +22,7 @@ const Navbar: FC<{ openModal: boolean; setOpenModal: Dispatch<SetStateAction<boo
 
 const NavContent: FC<{ openModal: boolean; setOpenModal: Dispatch<SetStateAction<boolean>> }> = ({ openModal, setOpenModal }) => {
   const [shouldAppear, setShouldAppear] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     const yDifferenceAllowd = 100;
@@ -64,8 +67,6 @@ const NavContent: FC<{ openModal: boolean; setOpenModal: Dispatch<SetStateAction
                 <ContactMeModal openModal={openModal} setOpenModal={setOpenModal} />
                 <motion.a
                   whileHover={{ scale: 1.2 }}
-                  onHoverStart={(e) => {}}
-                  onHoverEnd={(e) => {}}
                   href="/"
                   className="text-gray-700 dark:text-white hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-base font-medium"
                 >
@@ -73,8 +74,6 @@ const NavContent: FC<{ openModal: boolean; setOpenModal: Dispatch<SetStateAction
                 </motion.a>
                 <motion.a
                   whileHover={{ scale: 1.2 }}
-                  onHoverStart={(e) => {}}
-                  onHoverEnd={(e) => {}}
                   onClick={() => setOpenModal(true)}
                   className="text-gray-700 dark:text-white hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-base font-medium"
                 >
@@ -82,12 +81,26 @@ const NavContent: FC<{ openModal: boolean; setOpenModal: Dispatch<SetStateAction
                 </motion.a>
                 <motion.a
                   whileHover={{ scale: 1.2 }}
-                  onHoverStart={(e) => {}}
-                  onHoverEnd={(e) => {}}
                   href="/projects"
                   className="text-gray-700 dark:text-white hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-base font-medium"
                 >
                   Projects
+                </motion.a>
+                {/* <Button
+                  // whileHover={{ scale: 1.2 }}
+                  // onHoverStart={(e) => {}}
+                  // onHoverEnd={(e) => {}}
+                  onClick={() => router.push("/web-three")}
+                  className="text-gray-700 dark:text-white hover:bg-gradient-to-r hover:scale-110 transition duration-300 from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+                >
+                  <span className="hover:scale-125 transition duration-300"> Web 3</span>
+                </Button> */}
+                <motion.a
+                  whileHover={{ scale: 1.2 }}
+                  href="/web-three"
+                  className="text-gray-700 dark:text-white hover:bg-gradient-to-r from-amber-400 to-rose-600 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Web 3
                 </motion.a>
               </div>
             </div>
