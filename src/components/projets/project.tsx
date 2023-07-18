@@ -6,19 +6,22 @@ import { MappedProjects } from "../../types/projects";
 
 const Project: FC<{ project: MappedProjects }> = ({ project }) => {
   return (
-    <div className="bg-white border-4 px-4 rounded-lg border-black">
+    <div className="bg-white border-4 px-4 rounded-lg border-primary-orange-60">
       <AboutTitle title={project.title} className="" />
       <div className="font-poppins ">
         <div className="flex flex-col text-justify m-5 ">
-          <div className="m-1 text-black gap-y-4 flex flex-col">
+          <div className="m-1 text-black gap-y-4 flex flex-col ">
             <p className="lg:h-36 xl:h-28 2xl:h-24 ">{project.description}</p>
-            <p className="text-center grow h-full">
-              Click{" "}
-              <a href={project.url} target="_blank" className="font-bold">
-                HERE{" "}
+            <div className="flex items-center justify-center">
+              <a
+                target="_blank"
+                href={project.url}
+                className="px-4 py-2 rounded-lg w-fit  bg-primary-orange-60 hover:bg-transparent hover:border-primary-orange-20 border-2 border-transparent font-poppins animate-bounce"
+              >
+                {" "}
+                Check it out
               </a>
-              to check it out.
-            </p>
+            </div>
             <TitleProjectsDescription title="Used Technologies" />
             <SkillsList items={project.technologies} className="lg:h-[34em] xl:h-[25em]" />
             <TitleProjectsDescription title="About" />
