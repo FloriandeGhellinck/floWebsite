@@ -6,7 +6,7 @@ import { MappedProjects } from "../../types/projects";
 
 const Project: FC<{ project: MappedProjects }> = ({ project }) => {
   return (
-    <div className="bg-white border-4 px-4 rounded-lg border-primary-orange-60">
+    <div className="bg-white border-4 px-4 rounded-lg border-primary-orange-60 shadow-xl">
       <AboutTitle title={project.title} className="" />
       <div className="font-poppins ">
         <div className="flex flex-col text-justify m-5 ">
