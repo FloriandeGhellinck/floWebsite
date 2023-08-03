@@ -277,8 +277,7 @@ const Projects: FC = () => {
         },
         {
           title: "Embie",
-          description:
-            "Embie's website has been totaly reworked in May & June 2023. (Currently old Website online, not the one I worked on.) ",
+          description: "Embie's website has been totaly reworked. (Currently old Website online, not the one I worked on.) ",
           url: "https://embie.be",
           technologies: [
             {
