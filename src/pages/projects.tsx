@@ -277,7 +277,7 @@ const Projects: FC = () => {
         },
         {
           title: "Embie",
-          description: "Embie's website has been totaly reworked. (Currently old Website online, not the one I worked on.) ",
+          description: "Embie's website has been totaly reworked. ",
           url: "https://embie.be",
           technologies: [
             {
