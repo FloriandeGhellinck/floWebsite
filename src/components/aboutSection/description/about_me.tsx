@@ -56,8 +56,15 @@ const AboutMe: FC<{ setOpenModal: Dispatch<SetStateAction<boolean>> }> = ({ setO
           </p>{" "}
           <br />
           <p>
-            After more than one year coding, I started coding in October 23 at <Link href={"www.aeco.cloud"}>Aeco</Link>. We build the{" "}
-            <Link href={"www.astro.tax"}>Astro</Link> online accounting service.
+            After more than one year coding, I started coding in October 23 at{" "}
+            <Link href={"www.aeco.cloud"} className="font-bold">
+              Aeco
+            </Link>
+            . We build the{" "}
+            <Link href={"www.astro.tax"} className="font-bold">
+              Astro
+            </Link>{" "}
+            online accounting service.
           </p>{" "}
           <br />
           <p>
