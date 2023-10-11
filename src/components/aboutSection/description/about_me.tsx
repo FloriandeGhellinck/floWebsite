@@ -57,11 +57,11 @@ const AboutMe: FC<{ setOpenModal: Dispatch<SetStateAction<boolean>> }> = ({ setO
           <br />
           <p>
             After more than one year coding, I started coding in October 23 at{" "}
-            <Link href={"http://aeco.cloud"} className="font-bold" passHref>
+            <Link href={"http://aeco.cloud"} className="font-bold" passHref target="_blank">
               Aeco
             </Link>
             . We build the{" "}
-            <Link href={"http://astro.tax"} className="font-bold" passHref>
+            <Link href={"http://astro.tax"} className="font-bold" passHref target="_blank">
               Astro
             </Link>{" "}
             online accounting service.
