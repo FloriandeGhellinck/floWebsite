@@ -2,6 +2,7 @@ import Aos from "aos";
 import { Dispatch, FC, SetStateAction, useEffect } from "react";
 import "aos/dist/aos.css";
 import { differenceInYears } from "date-fns";
+import Link from "next/link";
 
 const AboutMe: FC<{ setOpenModal: Dispatch<SetStateAction<boolean>> }> = ({ setOpenModal }) => {
   useEffect(() => {
@@ -52,6 +53,11 @@ const AboutMe: FC<{ setOpenModal: Dispatch<SetStateAction<boolean>> }> = ({ setO
           <p>
             I then had the opportunity to extend my internship at Embie with a fixed-term contract (CDD). This experience enabled me to
             further strengthen my technical skills and tackle more complex web development challenges.
+          </p>{" "}
+          <br />
+          <p>
+            After more than one year coding, I started coding in October 23 at <Link href={"www.aeco.cloud"}>Aeco</Link>. We build the{" "}
+            <Link href={"www.astro.tax"}>Astro</Link> online accounting service.
           </p>{" "}
           <br />
           <p>
