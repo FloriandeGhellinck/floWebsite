@@ -277,7 +277,8 @@ const Projects: FC = () => {
         },
         {
           title: "Embie",
-          description: "Embie's website has been totaly reworked. ",
+          description:
+            "Embie's website has been totaly reworked. It changed from a basic Tailwind display to a real app, with tailored content etc. ",
           url: "https://embie.be",
           technologies: [
             {
